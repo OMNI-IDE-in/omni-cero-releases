@@ -37,18 +37,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const downloadTriggers = document.querySelectorAll('.btn-download-trigger');
   const mobileModal = document.getElementById('mobileModal');
   const closeMobileModal = document.getElementById('closeMobileModal');
+  const downloadModal = document.getElementById('downloadModal');
+  const closeDownloadModal = document.getElementById('closeDownloadModal');
 
-  // Configurable Direct Download Link — GitHub release asset for the Windows installer
-  const DOWNLOAD_URL = "https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe";
+  // Direct release-asset URLs live in index.html — the picker's edition cards and the
+  // trigger anchors keep working even with JS disabled. The mobile "send to yourself"
+  // features share the download page so the recipient can pick an edition on a PC.
+  const DOWNLOAD_PAGE = "https://cero.omniide.com/#download";
 
   downloadTriggers.forEach(btn => {
     btn.addEventListener('click', (e) => {
+      // Always intercept the click: phones get the desktop-requirement notice,
+      // desktops get the edition picker (Live C-arm + Cero listed first).
+      e.preventDefault();
       if (isMobileDevice()) {
-        // A .exe is useless on a phone, so show the device requirement modal instead
-        e.preventDefault();
         openModal(mobileModal);
+      } else {
+        openModal(downloadModal);
       }
-      // On PC / Laptop the anchor's own href starts the download
+    });
+  });
+
+  // Dismiss the picker once a download has been started (the download itself
+  // is not interrupted by hiding the modal)
+  document.querySelectorAll('.edition-card').forEach(card => {
+    card.addEventListener('click', () => {
+      setTimeout(() => closeModal(downloadModal), 150);
     });
   });
 
@@ -63,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (closeMobileModal) {
     closeMobileModal.addEventListener('click', () => closeModal(mobileModal));
+  }
+
+  if (closeDownloadModal) {
+    closeDownloadModal.addEventListener('click', () => closeModal(downloadModal));
   }
 
   // 4. Video Demo Modal
@@ -93,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close modals on backdrop click
   window.addEventListener('click', (e) => {
     if (e.target === mobileModal) closeModal(mobileModal);
+    if (e.target === downloadModal) closeModal(downloadModal);
     if (e.target === videoModal) {
       closeModal(videoModal);
       if (demoVideo) demoVideo.pause();
@@ -105,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnCopyLink && copyLinkText) {
     btnCopyLink.addEventListener('click', () => {
-      const link = DOWNLOAD_URL;
+      const link = DOWNLOAD_PAGE;
       navigator.clipboard.writeText(link).then(() => {
         copyLinkText.textContent = "Link copied to clipboard";
         btnCopyLink.style.borderColor = "var(--green)";
@@ -137,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Compose mailto link so user can send immediately from their mail client
       const subject = encodeURIComponent("Omni Cero download link");
       const body = encodeURIComponent(
-        `Hi,\n\nHere is the download link for Omni Cero (Windows 64-bit):\n\n${DOWNLOAD_URL}\n\nInstall it on your workstation.`
+        `Hi,\n\nHere is the Omni Cero download page for Windows 64-bit workstations — choose Live C-arm + Cero or XVR + Cero Integrated:\n\n${DOWNLOAD_PAGE}\n\nInstall it on your OR machine.`
       );
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
 

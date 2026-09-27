@@ -1,6 +1,6 @@
 # Omni Cero
 
-> Omni Cero is an offline Windows software workstation for intraoperative medical imaging and surgical navigation. One installer unites a live C-arm fluoroscopy capture station (30 FPS), preoperative CT/MRI review with 3D multi-planar reconstruction, an embedded DICOM PACS archive, and 3D XVR Surgical Navigation — where XVR stands for X-ray Volume Registration, a neural 2D/3D registration technique that aligns live fluoroscopy frames with preoperative 3D volumes for sub-millimeter, tracker-free guidance.
+> Omni Cero is an offline Windows software workstation for intraoperative medical imaging and surgical navigation. It ships as two editions: Live C-arm + Cero (live 30 FPS C-arm fluoroscopy capture, preoperative CT/MRI review with 3D multi-planar reconstruction, embedded DICOM PACS archive) and XVR + Cero Integrated (the Cero suite combined with 3D XVR Surgical Navigation — where XVR stands for X-ray Volume Registration, a neural 2D/3D registration technique that aligns live fluoroscopy frames with preoperative 3D volumes for sub-millimeter, tracker-free guidance).
 
 Key facts:
 
@@ -14,5 +14,6 @@ Key facts:
 ## Links
 
 - [Homepage](https://cero.omniide.com/): product overview, story, FAQ, and download
-- [Windows installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe): Live_Cero_Setup.exe, ~195 MB
+- [Live C-arm + Cero installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe): Live_Cero_Setup.exe, ~195 MB (default edition)
+- [XVR + Cero Integrated installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/XVR_Cero_Setup.exe): XVR_Cero_Setup.exe, ~319 MB
 - [Parent company](https://omniide.com/): Omni IDE

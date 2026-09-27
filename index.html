@@ -116,7 +116,7 @@
             "name": "What is Omni Cero?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Omni Cero is an offline Windows software workstation for intraoperative imaging and surgical navigation. One installer provides three applications: the Live C-Arm Video Station for 30 FPS fluoroscopy capture, 3D XVR Surgical Navigation for guidance without tracking hardware, and an Intraoperative PACS with 3D multi-planar reconstruction. Everything computes on the machine in the room — nothing is sent to the cloud."
+              "text": "Omni Cero is an offline Windows software workstation for intraoperative imaging and surgical navigation, shipped as two editions. Live C-arm + Cero provides the Live C-Arm Video Station for 30 FPS fluoroscopy capture plus an Intraoperative PACS with 3D multi-planar reconstruction. XVR + Cero Integrated combines the Cero suite with 3D XVR Surgical Navigation — X-ray Volume Registration for guidance without tracking hardware. Everything computes on the machine in the room — nothing is sent to the cloud."
             }
           },
           {
@@ -156,7 +156,7 @@
             "name": "How is Omni Cero licensed?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Licenses are issued by Omni IDE and hardware-bound to the motherboard, CPU and system UUID, so they cannot be copied to another machine. Each license is Ed25519-signed and verified on-device — no phone-home is needed to keep working. Download the installer from the release page to get started."
+              "text": "Licenses are issued by Omni IDE and hardware-bound to the motherboard, CPU and system UUID, so they cannot be copied to another machine. Each license is Ed25519-signed and verified on-device — no phone-home is needed to keep working. Download an installer from the download section to get started."
             }
           }
         ]
@@ -170,7 +170,7 @@
   <!-- Announcement Bar -->
   <aside class="announce">
     <div class="container announce-inner">
-      <span class="announce-text"><strong>Omni Cero 2.0</strong> is now available — offline licensing and multi-modality workstation.</span>
+      <span class="announce-text"><strong>Omni Cero 2.0</strong> is now available — Live C-arm + Cero, and the new XVR + Cero Integrated edition.</span>
       <a href="#download" class="announce-link">Download&nbsp;&rarr;</a>
     </div>
   </aside>
@@ -231,10 +231,10 @@
                 Watch the clinical tour
               </button>
             </div>
-            <p class="hero-meta">Windows 10/11 · 64-bit · ~195&nbsp;MB · No cloud telemetry</p>
+            <p class="hero-meta">Windows 10/11 · 64-bit · Two editions · No cloud telemetry</p>
             <p class="hero-meta hero-meta-app">
               <img src="assets/images/xvr.png" alt="Omni Cero 3D XVR surgical navigation screen" class="meta-thumb" />
-              Also includes <strong>3D XVR Surgical Navigation</strong> — X-ray Volume Registration for sub-millimeter accuracy
+              New: <strong>XVR + Cero Integrated</strong> — 3D XVR Surgical Navigation with X-ray Volume Registration for sub-millimeter accuracy
             </p>
           </div>
 
@@ -336,9 +336,10 @@
           <div class="story-copy">
             <p>
               <strong>Omni Cero</strong> — from Latin <em>omni</em> ("all") and Spanish <em>cero</em> ("zero") —
-              is an intraoperative imaging and surgical navigation software suite for Windows. One installer
-              brings the whole imaging room into a single offline workstation: live C-arm capture,
-              preoperative CT/MRI review, DICOM archiving, and 3D XVR surgical navigation.
+              is an intraoperative imaging and surgical navigation software suite for Windows. Installed as
+              Live C-arm + Cero or XVR + Cero Integrated, it brings the whole imaging room into a single
+              offline workstation: live C-arm capture, preoperative CT/MRI review, DICOM archiving, and
+              3D XVR surgical navigation.
             </p>
             <p>
               It started with an observation from the imaging room itself. The C-arm already produces
@@ -570,11 +571,13 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
             <div class="faq-a">
               <p>
                 Omni Cero is an offline Windows software workstation for intraoperative imaging and
-                surgical navigation. One installer provides three applications: the
-                <strong>Live C-Arm Video Station</strong> for 30 FPS fluoroscopy capture,
-                <strong>3D XVR Surgical Navigation</strong> for guidance without tracking hardware, and an
-                <strong>Intraoperative PACS</strong> with 3D multi-planar reconstruction. Everything
-                computes on the machine in the room — nothing is sent to the cloud.
+                surgical navigation, shipped as two editions. <strong>Live C-arm + Cero</strong> provides
+                the <strong>Live C-Arm Video Station</strong> for 30 FPS fluoroscopy capture plus an
+                <strong>Intraoperative PACS</strong> with 3D multi-planar reconstruction.
+                <strong>XVR + Cero Integrated</strong> combines the Cero suite with
+                <strong>3D XVR Surgical Navigation</strong> — X-ray Volume Registration for guidance
+                without tracking hardware. Everything computes on the machine in the room — nothing is
+                sent to the cloud.
               </p>
             </div>
           </details>
@@ -646,8 +649,8 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
               <p>
                 Licenses are issued by Omni IDE and hardware-bound to the motherboard, CPU and system
                 UUID, so they cannot be copied to another machine. Each license is Ed25519-signed and
-                verified on-device — no phone-home is needed to keep working. Download the installer from
-                the release page to get started.
+                verified on-device — no phone-home is needed to keep working. Download an installer from
+                the download section to get started.
               </p>
             </div>
           </details>
@@ -661,18 +664,19 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
         <div class="download-panel">
           <h2>Deploy Omni Cero in your imaging room</h2>
           <p>
-            One installer includes the Live C-Arm Video Station, 3D XVR Surgical Navigation,
-            and the native DICOM PACS viewer.
+            Two self-contained editions — choose <strong>Live C-arm + Cero</strong> for live fluoroscopy
+            capture and review, or <strong>XVR + Cero Integrated</strong> to add 3D surgical navigation.
+            Both install offline on Windows 10/11 workstations.
           </p>
           <a class="btn btn-light btn-xl btn-download-trigger" id="mainDownloadBtn" href="https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe" download>
             <svg class="icon lucide lucide-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
             Download Omni Cero Workstation
           </a>
-          <p class="download-meta">Live_Cero_Setup.exe · ~195 MB · Published by <a href="https://omniide.com" target="_blank" rel="noopener" class="omni-ide-link">Omni IDE</a></p>
+          <p class="download-meta">Two editions · Live ~195 MB · XVR ~319 MB · Published by <a href="https://omniide.com" target="_blank" rel="noopener" class="omni-ide-link">Omni IDE</a></p>
           <div class="download-points">
             <span>3 native applications</span>
             <span>No runtime prerequisites</span>
-            <span>Single installer</span>
+            <span>Live &amp; XVR editions</span>
             <span>Node-locked licensing</span>
           </div>
         </div>
@@ -741,6 +745,56 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
         <svg class="icon lucide lucide-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
         <span id="copyLinkText">Copy download link</span>
       </button>
+    </div>
+  </div>
+
+  <!-- Download options modal -->
+  <div class="modal-backdrop" id="downloadModal">
+    <div class="modal-card modal-wide">
+      <button class="modal-close" id="closeDownloadModal" aria-label="Close">&times;</button>
+      <div class="modal-icon">
+        <svg class="lucide lucide-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+      </div>
+      <h3>Choose your Omni Cero edition</h3>
+      <p>
+        Both are self-contained offline installers for <strong>Windows 10/11 64-bit</strong>.
+        Not sure which one? Start with Live C-arm + Cero.
+      </p>
+      <div class="edition-list">
+        <a class="edition-card" href="https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe" download>
+          <div class="edition-body">
+            <div class="edition-head">
+              <h4>Live C-arm + Cero</h4>
+              <span class="edition-tag">Default</span>
+            </div>
+            <p>
+              Live 30 FPS C-arm fluoroscopy capture with the Intraoperative PACS, CT/MRI review
+              and 3D multi-planar reconstruction.
+            </p>
+            <span class="edition-file">Live_Cero_Setup.exe · ~195 MB</span>
+          </div>
+          <span class="edition-dl" aria-hidden="true">
+            <svg class="lucide lucide-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+          </span>
+        </a>
+        <a class="edition-card" href="https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/XVR_Cero_Setup.exe" download>
+          <div class="edition-body">
+            <div class="edition-head">
+              <h4>XVR + Cero Integrated</h4>
+              <span class="edition-tag edition-tag-new">New</span>
+            </div>
+            <p>
+              The Cero workstation combined with 3D XVR Surgical Navigation — X-ray Volume
+              Registration for sub-millimeter, tracker-free guidance.
+            </p>
+            <span class="edition-file">XVR_Cero_Setup.exe · ~319 MB</span>
+          </div>
+          <span class="edition-dl" aria-hidden="true">
+            <svg class="lucide lucide-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+          </span>
+        </a>
+      </div>
+      <p class="edition-note">Licensing is node-locked per workstation and issued by Omni IDE.</p>
     </div>
   </div>
 
