@@ -3,13 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Omni Cero — Intraoperative C-Arm & 3D Surgical Navigation Workstation</title>
-  <meta name="description" content="Omni Cero unites live C-arm fluoroscopy capture, 3D CT/MRI multi-planar reconstruction, and sub-millimeter surgical navigation in a single offline Windows workstation." />
+  <title>Omni Cero — C-Arm Imaging &amp; Surgical Navigation Software for Windows</title>
+  <meta name="description" content="Omni Cero is an offline Windows workstation for the OR: 30 FPS C-arm fluoroscopy capture, CT/MRI review, DICOM PACS and XVR sub-millimeter surgical navigation." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="Omni IDE" />
+  <meta name="keywords" content="Omni Cero, C-arm imaging software, surgical navigation software, XVR, X-ray volume registration, fluoroscopy capture, intraoperative navigation, DICOM viewer, offline PACS, Windows" />
+  <link rel="canonical" href="https://cero.omniide.com/" />
+  <meta name="theme-color" content="#0B63CE" />
+  <meta name="application-name" content="Omni Cero" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Omni Cero" />
+  <meta property="og:url" content="https://cero.omniide.com/" />
+  <meta property="og:title" content="Omni Cero — C-Arm Imaging &amp; 3D Surgical Navigation Software" />
+  <meta property="og:description" content="One offline Windows workstation for the operating suite: live C-arm fluoroscopy, CT/MRI 3D review, DICOM PACS and XVR sub-millimeter navigation." />
+  <meta property="og:image" content="https://cero.omniide.com/assets/images/og-omni-cero.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Omni Cero — live C-arm fluoroscopy capture and 3D surgical navigation on Windows" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Omni Cero — C-Arm Imaging &amp; 3D Surgical Navigation Software" />
+  <meta name="twitter:description" content="Live C-arm fluoroscopy, CT/MRI review, DICOM PACS and XVR sub-millimeter navigation in one offline Windows workstation." />
+  <meta name="twitter:image" content="https://cero.omniide.com/assets/images/og-omni-cero.png" />
+  <meta name="twitter:image:alt" content="Omni Cero — offline surgical imaging and navigation workstation" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://cero.omniide.com/#organization",
+        "name": "Omni Cero",
+        "alternateName": "Omni Cero Medical Systems",
+        "url": "https://cero.omniide.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cero.omniide.com/assets/images/logo.png",
+          "width": 1010,
+          "height": 790
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Omni IDE",
+          "url": "https://omniide.com/"
+        },
+        "description": "Omni Cero develops an offline intraoperative imaging and surgical navigation workstation for Windows: live C-arm fluoroscopy capture, CT/MRI review, DICOM PACS and XVR sub-millimeter navigation."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cero.omniide.com/#website",
+        "url": "https://cero.omniide.com/",
+        "name": "Omni Cero",
+        "description": "Official site of Omni Cero — the offline Windows workstation for live C-arm fluoroscopy, 3D CT/MRI review and sub-millimeter surgical navigation.",
+        "publisher": { "@id": "https://cero.omniide.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://cero.omniide.com/#software",
+        "name": "Omni Cero",
+        "alternateName": "Omni Cero Surgical Imaging Workstation",
+        "applicationCategory": "MedicalApplication",
+        "applicationSubCategory": "Surgical navigation and medical imaging",
+        "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+        "softwareVersion": "2.0",
+        "softwareRequirements": "Windows 10/11 64-bit, 8 GB RAM (16 GB recommended for 3D CT), 2.5 GB free disk space, USB UVC capture card",
+        "fileSize": "195 MB",
+        "downloadUrl": "https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe",
+        "installUrl": "https://cero.omniide.com/#download",
+        "releaseNotes": "https://cero.omniide.com/#download",
+        "screenshot": [
+          "https://cero.omniide.com/assets/images/livecarmstreamer.png",
+          "https://cero.omniide.com/assets/images/xvr.png",
+          "https://cero.omniide.com/assets/images/workstation_ui.png"
+        ],
+        "featureList": [
+          "Live C-arm fluoroscopy capture at 30 FPS with sub-frame latency",
+          "Automatic 16-bit DICOM Part 10 conversion with full metadata",
+          "XVR (X-ray Volume Registration): neural 2D/3D registration of live fluoroscopy to preoperative CT/MRI",
+          "Sub-millimeter target accuracy under 0.8 mm MTRE",
+          "Intraoperative PACS with DICOM C-STORE archive over LAN",
+          "Multi-planar CT/MRI reconstruction and cinematic 3D volume rendering",
+          "100% offline operation with Ed25519 node-locked licensing",
+          "Automatic LAO/RAO and cranial/caudal gantry angle readout"
+        ],
+        "publisher": { "@id": "https://cero.omniide.com/#organization" },
+        "inLanguage": "en",
+        "audience": {
+          "@type": "MedicalAudience",
+          "audienceType": "Orthopedic and spine surgeons, radiologic technologists, hospital IT"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://cero.omniide.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Omni Cero?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Omni Cero is an offline Windows software workstation for intraoperative imaging and surgical navigation. One installer provides three applications: the Live C-Arm Video Station for 30 FPS fluoroscopy capture, 3D XVR Surgical Navigation for guidance without tracking hardware, and an Intraoperative PACS with 3D multi-planar reconstruction. Everything computes on the machine in the room — nothing is sent to the cloud."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does XVR mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "XVR stands for X-ray Volume Registration. It is a neural 2D/3D registration technique that aligns each live fluoroscopy frame from the C-arm with the patient's preoperative CT or MRI volume. Instead of optical trackers or fiducial arrays, the XVR pose solver estimates the 6-DOF relationship between the X-ray image and the 3D anatomy in real time — giving sub-millimeter surgical navigation from the C-arm you already own."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Omni Cero need an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Every application runs fully offline — no cloud services, no telemetry, no activation servers. DICOM studies move only across your hospital LAN, and licenses are Ed25519-signed files verified mathematically on the device itself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which C-arms and capture cards are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Omni Cero works with C-arms from Siemens Healthineers, GE Healthcare, Philips and Ziehm Imaging through any USB UVC capture card with HDMI, DVI, BNC or RCA input. Capture is driver-free on Windows 10/11 and buffers directly at 30 FPS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the system requirements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Windows 10 or 11 (64-bit), 8 GB RAM minimum — 16 GB recommended for 3D CT volumes — and 2.5 GB of free disk space. No Python, Java or CUDA runtime is required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is Omni Cero licensed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Licenses are issued by Omni IDE and hardware-bound to the motherboard, CPU and system UUID, so they cannot be copied to another machine. Each license is Ed25519-signed and verified on-device — no phone-home is needed to keep working. Download the installer from the release page to get started."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -31,8 +185,10 @@
 
       <nav class="nav-links" id="navMenu">
         <a href="#modalities" class="nav-item">Products</a>
+        <a href="#story" class="nav-item">Story</a>
         <a href="#security" class="nav-item">Security</a>
         <a href="#specs" class="nav-item">Compatibility</a>
+        <a href="#faq" class="nav-item">FAQ</a>
         <a href="#download" class="nav-item">Download</a>
       </nav>
 
@@ -77,14 +233,14 @@
             </div>
             <p class="hero-meta">Windows 10/11 · 64-bit · ~195&nbsp;MB · No cloud telemetry</p>
             <p class="hero-meta hero-meta-app">
-              <img src="assets/images/xvr.png" alt="" class="meta-thumb" />
-              Also includes <strong>3D XVR Surgical Navigation</strong> — sub-millimeter registration
+              <img src="assets/images/xvr.png" alt="Omni Cero 3D XVR surgical navigation screen" class="meta-thumb" />
+              Also includes <strong>3D XVR Surgical Navigation</strong> — X-ray Volume Registration for sub-millimeter accuracy
             </p>
           </div>
 
           <div class="hero-media">
             <div class="video-frame">
-              <video autoplay muted loop playsinline preload="metadata" src="assets/video/clinical.mp4"></video>
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/images/livecarmstreamer.png" src="assets/video/clinical.mp4" aria-label="Live C-arm fluoroscopy capture in the operating room"></video>
             </div>
             <p class="video-caption"><span class="caption-dot"></span>Clinical evaluation — live C-arm capture in the OR</p>
           </div>
@@ -104,7 +260,7 @@
           <div class="showcase-body">
             <div class="screen-view active" id="tab-carm">
               <div class="screen-media-container">
-                <img src="assets/images/livecarmstreamer.png" alt="Omni Cero Live C-Arm Streamer capturing fluoroscopy in real time" class="screen-img" />
+                <img src="assets/images/livecarmstreamer.png" alt="Omni Cero Live C-Arm Video Station capturing 30 FPS fluoroscopy from a surgical C-arm" class="screen-img" loading="lazy" decoding="async" />
                 <div class="hud-overlay">
                   <div class="hud-corner top-left">
                     <div class="hud-tag hud-accent">30 FPS · LIVE</div>
@@ -115,7 +271,7 @@
 
             <div class="screen-view" id="tab-xvr">
               <div class="screen-media-container">
-                <img src="assets/images/xvr.png" alt="Omni Cero 3D XVR surgical navigation during registration" class="screen-img" />
+                <img src="assets/images/xvr.png" alt="Omni Cero 3D XVR surgical navigation — X-ray Volume Registration aligning a C-arm image with a 3D volume" class="screen-img" loading="lazy" decoding="async" />
                 <div class="hud-overlay">
                   <div class="hud-corner top-left">
                     <div class="hud-tag hud-accent">6-DOF REGISTRATION</div>
@@ -127,7 +283,7 @@
 
             <div class="screen-view" id="tab-mpr">
               <div class="screen-media-container">
-                <img src="assets/images/workstation_ui.png" alt="Omni Cero diagnostic PACS with 3D MPR" class="screen-img" />
+                <img src="assets/images/workstation_ui.png" alt="Omni Cero Intraoperative PACS with 3D multi-planar reconstruction and DICOM explorer" class="screen-img" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -168,6 +324,51 @@
       </div>
     </section>
 
+    <!-- Story -->
+    <section class="section section-alt" id="story">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The story behind the name</span>
+          <h2>Cero means zero. That is the whole design brief.</h2>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-copy">
+            <p>
+              <strong>Omni Cero</strong> — from Latin <em>omni</em> ("all") and Spanish <em>cero</em> ("zero") —
+              is an intraoperative imaging and surgical navigation software suite for Windows. One installer
+              brings the whole imaging room into a single offline workstation: live C-arm capture,
+              preoperative CT/MRI review, DICOM archiving, and 3D XVR surgical navigation.
+            </p>
+            <p>
+              It started with an observation from the imaging room itself. The C-arm already produces
+              beautiful real-time images, and the preoperative CT already holds the 3D truth — yet the two
+              live in separate worlds. Technologists shuttle between a capture box, a viewer and a navigation
+              cart while the clock on the sterile field keeps running. Omni Cero was built to close that loop
+              in software: capture, reconstruct, register, navigate — without a single cable leaving the room.
+            </p>
+            <p>
+              The name is the promise. We hold every release to the number <em>cero</em>: zero cloud
+              dependency, zero telemetry, zero patient data leaving the hospital, and zero dropped frames on
+              a 30&nbsp;FPS stream. <em>Omni</em> because one workstation should cover every modality in the
+              room. When a surgeon asks "where is the tip?", the answer should come from the images already
+              being taken — not from a server farm.
+            </p>
+          </div>
+
+          <aside class="story-card">
+            <h3>The "cero" checklist</h3>
+            <ul class="check-list">
+              <li><strong>Zero cloud</strong> — every computation runs on the workstation in the room</li>
+              <li><strong>Zero telemetry</strong> — no phone-home, no analytics, ever</li>
+              <li><strong>Zero dropped frames</strong> — 30 FPS fluoroscopy buffered locally, frame by frame</li>
+              <li><strong>Zero data egress</strong> — DICOM studies never leave your hospital LAN</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <!-- Product pillars -->
     <section class="section" id="modalities">
       <div class="container">
@@ -204,8 +405,8 @@
             </div>
             <h3>3D XVR Surgical Navigation</h3>
             <p class="card-summary">
-              Fuses preoperative CT/MRI volumes with intraoperative 2D fluoroscopy for
-              real-time 6-DOF guidance during orthopedic and spine procedures.
+              XVR (X-ray Volume Registration) fuses preoperative CT/MRI volumes with intraoperative
+              2D fluoroscopy for real-time 6-DOF guidance during orthopedic and spine procedures.
             </p>
             <ul class="check-list">
               <li>Deep anatomical pose solver with neural 2D/3D registration</li>
@@ -348,6 +549,112 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Omni Cero, XVR and the rest — answered</h2>
+          <p>
+            What the workstation does, what XVR technology means, and how licensing works
+            inside the operating room.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span class="faq-q">What is Omni Cero?</span>
+              <svg class="lucide lucide-chevron-down faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-a">
+              <p>
+                Omni Cero is an offline Windows software workstation for intraoperative imaging and
+                surgical navigation. One installer provides three applications: the
+                <strong>Live C-Arm Video Station</strong> for 30 FPS fluoroscopy capture,
+                <strong>3D XVR Surgical Navigation</strong> for guidance without tracking hardware, and an
+                <strong>Intraoperative PACS</strong> with 3D multi-planar reconstruction. Everything
+                computes on the machine in the room — nothing is sent to the cloud.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span class="faq-q">What does XVR mean?</span>
+              <svg class="lucide lucide-chevron-down faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-a">
+              <p>
+                <strong>XVR stands for X-ray Volume Registration.</strong> It is a neural 2D/3D
+                registration technique that aligns each live fluoroscopy frame from the C-arm with the
+                patient's preoperative CT or MRI volume. Instead of optical trackers or fiducial arrays,
+                the XVR pose solver estimates the 6-DOF relationship between the X-ray image and the 3D
+                anatomy in real time — giving sub-millimeter surgical navigation from the C-arm you
+                already own.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span class="faq-q">Does Omni Cero need an internet connection?</span>
+              <svg class="lucide lucide-chevron-down faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-a">
+              <p>
+                No. Every application runs fully offline — no cloud services, no telemetry, no activation
+                servers. DICOM studies move only across your hospital LAN, and licenses are Ed25519-signed
+                files verified mathematically on the device itself.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span class="faq-q">Which C-arms and capture cards are supported?</span>
+              <svg class="lucide lucide-chevron-down faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-a">
+              <p>
+                Omni Cero works with C-arms from Siemens Healthineers, GE Healthcare, Philips and Ziehm
+                Imaging through any USB UVC capture card with HDMI, DVI, BNC or RCA input. Capture is
+                driver-free on Windows 10/11 and buffers directly at 30 FPS.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span class="faq-q">What are the system requirements?</span>
+              <svg class="lucide lucide-chevron-down faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-a">
+              <p>
+                Windows 10 or 11 (64-bit), 8 GB RAM minimum — 16 GB recommended for 3D CT volumes — and
+                2.5 GB of free disk space. No Python, Java or CUDA runtime is required.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span class="faq-q">How is Omni Cero licensed?</span>
+              <svg class="lucide lucide-chevron-down faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-a">
+              <p>
+                Licenses are issued by Omni IDE and hardware-bound to the motherboard, CPU and system
+                UUID, so they cannot be copied to another machine. Each license is Ed25519-signed and
+                verified on-device — no phone-home is needed to keep working. Download the installer from
+                the release page to get started.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Download -->
     <section class="section download" id="download">
       <div class="container">
@@ -391,6 +698,8 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
       </div>
       <div class="footer-col">
         <h5>Resources</h5>
+        <a href="#story">Why Omni Cero</a>
+        <a href="#faq">FAQ — XVR &amp; licensing</a>
         <a href="#specs">Hardware setup</a>
         <a href="#specs">DICOM conformance</a>
         <a href="#download">Release notes</a>

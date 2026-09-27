@@ -1,0 +1,18 @@
+# Omni Cero
+
+> Omni Cero is an offline Windows software workstation for intraoperative medical imaging and surgical navigation. One installer unites a live C-arm fluoroscopy capture station (30 FPS), preoperative CT/MRI review with 3D multi-planar reconstruction, an embedded DICOM PACS archive, and 3D XVR Surgical Navigation — where XVR stands for X-ray Volume Registration, a neural 2D/3D registration technique that aligns live fluoroscopy frames with preoperative 3D volumes for sub-millimeter, tracker-free guidance.
+
+Key facts:
+
+- Applications: Live C-Arm Video Station (OmniCero_LiveCarm.exe), 3D XVR Surgical Navigation (OmniCero_XVR_Navigation.exe), Intraoperative PACS & 3D MPR (OmniCero.exe)
+- Platform: Windows 10/11 (64-bit), 8 GB RAM minimum (16 GB recommended for 3D CT), 2.5 GB disk space
+- Licensing: Ed25519-signed license files, hardware-bound to motherboard, CPU and system UUID; fully offline
+- Connectivity: 100% offline — no telemetry, no cloud services, no activation servers
+- Accuracy claims: sub-millimeter target error (< 0.8 mm MTRE), < 18 ms inference latency
+- Compatibility: C-arms from Siemens Healthineers, GE Healthcare, Philips and Ziehm Imaging; any USB UVC capture card with HDMI, DVI, BNC or RCA input
+
+## Links
+
+- [Homepage](https://cero.omniide.com/): product overview, story, FAQ, and download
+- [Windows installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe): Live_Cero_Setup.exe, ~195 MB
+- [Parent company](https://omniide.com/): Omni IDE

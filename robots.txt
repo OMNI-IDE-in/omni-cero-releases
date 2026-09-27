@@ -1,0 +1,5 @@
+# Omni Cero — https://cero.omniide.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://cero.omniide.com/sitemap.xml
