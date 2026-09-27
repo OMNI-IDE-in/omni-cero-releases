@@ -304,7 +304,7 @@ h1, h2, h3, h4 {
 
 .hero {
   position: relative;
-  padding: 92px 0 64px;
+  padding: 0 0 64px;
   background:
     radial-gradient(1100px 480px at 50% -140px, var(--blue-soft), transparent 65%),
     var(--bg);
@@ -1382,7 +1382,7 @@ h1, h2, h3, h4 {
   }
 
   .hero {
-    padding: 64px 0 48px;
+    padding: 0 0 48px;
   }
 
   .hero-cta .btn {
