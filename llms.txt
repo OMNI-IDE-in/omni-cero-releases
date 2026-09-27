@@ -14,6 +14,7 @@ Key facts:
 ## Links
 
 - [Homepage](https://cero.omniide.com/): product overview, story, FAQ, and download
+- [Contact & licensing](https://cero.omniide.com/contact.html): software access, license requests and support — contact@omniide.com, +91 98453 25913
 - [Live C-arm + Cero installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe): Live_Cero_Setup.exe, ~195 MB (default edition)
 - [XVR + Cero Integrated installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/XVR_Cero_Setup.exe): XVR_Cero_Setup.exe, ~319 MB
 - [Parent company](https://omniide.com/): Omni IDE

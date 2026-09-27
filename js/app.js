@@ -195,4 +195,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 9. Contact Page Form — composes a mailto: message (static site, no backend)
+  const contactForm = document.getElementById('contactForm');
+  const contactFeedback = document.getElementById('contactFeedback');
+
+  if (contactForm && contactFeedback) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const org = document.getElementById('contactOrg').value.trim();
+      const topic = document.getElementById('contactTopic').value;
+      const message = document.getElementById('contactMessage').value.trim();
+
+      const showFeedback = (text, ok) => {
+        contactFeedback.textContent = text;
+        contactFeedback.style.color = ok ? 'var(--green)' : '#D64545';
+        contactFeedback.style.display = 'block';
+      };
+
+      if (!name || !message) {
+        showFeedback('Please add your name and a short message.', false);
+        return;
+      }
+
+      if (!email || !email.includes('@')) {
+        showFeedback('Please enter a valid work email address.', false);
+        return;
+      }
+
+      const subject = `[Omni Cero] ${topic} — ${name}`;
+      const body = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        org ? `Hospital / organization: ${org}` : null,
+        `Topic: ${topic}`,
+        '',
+        message,
+        '',
+        '— Sent from the Omni Cero contact page (cero.omniide.com/contact.html)'
+      ].filter(Boolean).join('\n');
+
+      window.location.href = `mailto:contact@omniide.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      showFeedback('Opening your mail client — the message is ready to send to contact@omniide.com.', true);
+    });
+  }
+
 });
