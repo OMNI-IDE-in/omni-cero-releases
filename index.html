@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Omni Cero — C-Arm Imaging &amp; Surgical Navigation Software for Windows</title>
-  <meta name="description" content="Omni Cero is an offline Windows workstation for the OR: 30 FPS C-arm fluoroscopy capture, CT/MRI review, DICOM PACS and XVR sub-millimeter surgical navigation." />
+  <meta name="description" content="Omni Cero is an offline Windows workstation for the OR: 30 FPS C-arm fluoroscopy with real-time DSA, CT/MRI review, DICOM PACS and XVR sub-millimeter surgical navigation." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="author" content="Omni IDE" />
-  <meta name="keywords" content="Omni Cero, C-arm imaging software, surgical navigation software, XVR, X-ray volume registration, fluoroscopy capture, intraoperative navigation, DICOM viewer, offline PACS, Windows" />
+  <meta name="keywords" content="Omni Cero, C-arm imaging software, surgical navigation software, XVR, X-ray volume registration, fluoroscopy capture, digital subtraction angiography, vascular roadmapping, intraoperative navigation, DICOM viewer, offline PACS, Windows" />
   <link rel="canonical" href="https://cero.omniide.com/" />
   <meta name="theme-color" content="#0B63CE" />
   <meta name="application-name" content="Omni Cero" />
@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Omni Cero" />
   <meta property="og:url" content="https://cero.omniide.com/" />
   <meta property="og:title" content="Omni Cero — C-Arm Imaging &amp; 3D Surgical Navigation Software" />
-  <meta property="og:description" content="One offline Windows workstation for the operating suite: live C-arm fluoroscopy, CT/MRI 3D review, DICOM PACS and XVR sub-millimeter navigation." />
+  <meta property="og:description" content="One offline Windows workstation for the operating suite: live C-arm fluoroscopy with DSA and roadmapping, CT/MRI 3D review, DICOM PACS and XVR sub-millimeter navigation." />
   <meta property="og:image" content="https://cero.omniide.com/assets/images/og-omni-cero.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,7 +29,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Omni Cero — C-Arm Imaging &amp; 3D Surgical Navigation Software" />
-  <meta name="twitter:description" content="Live C-arm fluoroscopy, CT/MRI review, DICOM PACS and XVR sub-millimeter navigation in one offline Windows workstation." />
+  <meta name="twitter:description" content="Live C-arm fluoroscopy with DSA and roadmapping, CT/MRI review, DICOM PACS and XVR sub-millimeter navigation in one offline Windows workstation." />
   <meta name="twitter:image" content="https://cero.omniide.com/assets/images/og-omni-cero.png" />
   <meta name="twitter:image:alt" content="Omni Cero — offline surgical imaging and navigation workstation" />
 
@@ -80,7 +80,7 @@
         "applicationSubCategory": "Surgical navigation and medical imaging",
         "operatingSystem": "Windows 10, Windows 11 (64-bit)",
         "softwareVersion": "2.0",
-        "softwareRequirements": "Windows 10/11 64-bit, 8 GB RAM (16 GB recommended for 3D CT), 2.5 GB free disk space, USB UVC capture card",
+        "softwareRequirements": "Windows 10/11 64-bit, 4 GB RAM for the Live C-arm edition (16 GB recommended for 3D CT), 2.5 GB free disk space, USB UVC capture card, no dedicated GPU required",
         "fileSize": "195 MB",
         "downloadUrl": "https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe",
         "installUrl": "https://cero.omniide.com/#download",
@@ -92,7 +92,11 @@
         ],
         "featureList": [
           "Live C-arm fluoroscopy capture at 30 FPS with sub-frame latency",
+          "Real-time Digital Subtraction Angiography (DSA) with motion-corrected mask subtraction",
+          "Vascular roadmapping with automatic peak opacification tracking",
+          "Zero-install sterile tablet console on iPad/iPhone/Android via QR pairing, fully offline",
           "Automatic 16-bit DICOM Part 10 conversion with full metadata",
+          "Bundled Weasis diagnostic viewer for PACS review",
           "XVR (X-ray Volume Registration): neural 2D/3D registration of live fluoroscopy to preoperative CT/MRI",
           "Sub-millimeter target accuracy under 0.8 mm MTRE",
           "Intraoperative PACS with DICOM C-STORE archive over LAN",
@@ -116,7 +120,7 @@
             "name": "What is Omni Cero?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Omni Cero is an offline Windows software workstation for intraoperative imaging and surgical navigation, shipped as two editions. Live C-arm + Cero provides the Live C-Arm Video Station for 30 FPS fluoroscopy capture plus an Intraoperative PACS with 3D multi-planar reconstruction. XVR + Cero Integrated combines the Cero suite with 3D XVR Surgical Navigation — X-ray Volume Registration for guidance without tracking hardware. Everything computes on the machine in the room — nothing is sent to the cloud."
+              "text": "Omni Cero is an offline Windows software workstation for intraoperative imaging and surgical navigation, shipped as two editions. Live C-arm + Cero provides the Live C-Arm Video Station for 30 FPS fluoroscopy capture — including real-time DSA and vascular roadmapping — plus an Intraoperative PACS with 3D multi-planar reconstruction. XVR + Cero Integrated combines the Cero suite with 3D XVR Surgical Navigation — X-ray Volume Registration for guidance without tracking hardware. Everything computes on the machine in the room — nothing is sent to the cloud."
             }
           },
           {
@@ -132,7 +136,7 @@
             "name": "Does Omni Cero need an internet connection?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Every application runs fully offline — no cloud services, no telemetry, no activation servers. DICOM studies move only across your hospital LAN, and licenses are Ed25519-signed files verified mathematically on the device itself."
+              "text": "No. Every application runs fully offline — no cloud services, no telemetry, no activation servers. Even the sterile table-side tablet console pairs over a private local network with no internet or app store. DICOM studies move only across your hospital LAN, and licenses are Ed25519-signed files verified mathematically on the device itself."
             }
           },
           {
@@ -148,7 +152,7 @@
             "name": "What are the system requirements?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Windows 10 or 11 (64-bit), 8 GB RAM minimum — 16 GB recommended for 3D CT volumes — and 2.5 GB of free disk space. No Python, Java or CUDA runtime is required."
+              "text": "Windows 10 or 11 (64-bit), 4 GB RAM for the Live C-arm edition — 16 GB recommended for 3D CT volumes — and 2.5 GB of free disk space. No dedicated GPU, Python or Java runtime is required."
             }
           },
           {
@@ -218,9 +222,9 @@
             <span class="eyebrow">Surgical navigation workstation</span>
             <h1 class="hero-title">Real-time C-arm imaging.<br />Sub-millimeter 3D navigation.</h1>
             <p class="hero-sub">
-              Omni Cero brings live 30&nbsp;FPS fluoroscopy capture, preoperative CT/MRI reconstruction,
-              and anatomical pose registration into one offline workstation — designed for the
-              operating suite, not the cloud.
+              Omni Cero brings live 30&nbsp;FPS fluoroscopy capture with real-time DSA, preoperative
+              CT/MRI reconstruction, and anatomical pose registration into one offline workstation —
+              designed for the operating suite, not the cloud.
             </p>
             <div class="hero-cta">
               <a class="btn btn-primary btn-lg btn-download-trigger" id="heroDownloadBtn" href="https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe" download>
@@ -390,13 +394,14 @@
             </div>
             <h3>Live C-Arm Video Station</h3>
             <p class="card-summary">
-              Real-time 30 FPS fluoroscopy from any surgical C-arm via plug-and-play USB
-              HDMI/RCA capture. No drivers, no configuration.
+              Real-time 30 FPS fluoroscopy from any surgical C-arm via plug-and-play USB capture —
+              now with live DSA, vascular roadmapping and sterile table-side tablet control.
             </p>
             <ul class="check-list">
-              <li>Sub-frame latency display with instant spacebar last-image hold</li>
-              <li>Automatic 16-bit DICOM Part 10 conversion with full metadata</li>
-              <li>One-click batch import of existing Hold.bmp sequences</li>
+              <li>Real-time DSA with motion-corrected mask subtraction</li>
+              <li>Vascular roadmapping with automatic peak opacification lock</li>
+              <li>Zero-install tablet console — QR-pair any iPad or Android, fully offline</li>
+              <li>Last-image hold, 30 FPS cine replay and 16-bit DICOM capture</li>
             </ul>
             <span class="card-file">OmniCero_LiveCarm.exe</span>
           </article>
@@ -542,9 +547,9 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
             <h4>Workstation</h4>
             <ul>
               <li>Windows 10 / 11 (64-bit)</li>
-              <li>8 GB RAM min · 16 GB for 3D CT</li>
+              <li>4 GB RAM for Live C-arm · 16 GB for 3D CT</li>
               <li>2.5 GB free disk space</li>
-              <li>No Python or Java required</li>
+              <li>No dedicated GPU, Python or Java required</li>
             </ul>
           </div>
         </div>
@@ -573,8 +578,9 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
               <p>
                 Omni Cero is an offline Windows software workstation for intraoperative imaging and
                 surgical navigation, shipped as two editions. <strong>Live C-arm + Cero</strong> provides
-                the <strong>Live C-Arm Video Station</strong> for 30 FPS fluoroscopy capture plus an
-                <strong>Intraoperative PACS</strong> with 3D multi-planar reconstruction.
+                the <strong>Live C-Arm Video Station</strong> for 30 FPS fluoroscopy capture — including
+                real-time DSA and vascular roadmapping — plus an <strong>Intraoperative PACS</strong> with
+                3D multi-planar reconstruction.
                 <strong>XVR + Cero Integrated</strong> combines the Cero suite with
                 <strong>3D XVR Surgical Navigation</strong> — X-ray Volume Registration for guidance
                 without tracking hardware. Everything computes on the machine in the room — nothing is
@@ -608,8 +614,9 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
             <div class="faq-a">
               <p>
                 No. Every application runs fully offline — no cloud services, no telemetry, no activation
-                servers. DICOM studies move only across your hospital LAN, and licenses are Ed25519-signed
-                files verified mathematically on the device itself.
+                servers. Even the sterile table-side tablet console pairs over a private local network
+                with no internet or app store. DICOM studies move only across your hospital LAN, and
+                licenses are Ed25519-signed files verified mathematically on the device itself.
               </p>
             </div>
           </details>
@@ -635,8 +642,9 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
             </summary>
             <div class="faq-a">
               <p>
-                Windows 10 or 11 (64-bit), 8 GB RAM minimum — 16 GB recommended for 3D CT volumes — and
-                2.5 GB of free disk space. No Python, Java or CUDA runtime is required.
+                Windows 10 or 11 (64-bit), 4 GB RAM for the Live C-arm edition — 16 GB recommended for
+                3D CT volumes — and 2.5 GB of free disk space. No dedicated GPU, Python or Java runtime
+                is required.
               </p>
             </div>
           </details>
@@ -665,8 +673,8 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
         <div class="download-panel">
           <h2>Deploy Omni Cero in your imaging room</h2>
           <p>
-            Two self-contained editions — choose <strong>Live C-arm + Cero</strong> for live fluoroscopy
-            capture and review, or <strong>XVR + Cero Integrated</strong> to add 3D surgical navigation.
+            Two self-contained editions — choose <strong>Live C-arm + Cero</strong> for live fluoroscopy,
+            DSA and roadmapping, or <strong>XVR + Cero Integrated</strong> to add 3D surgical navigation.
             Both install offline on Windows 10/11 workstations.
           </p>
           <a class="btn btn-light btn-xl btn-download-trigger" id="mainDownloadBtn" href="https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe" download>
@@ -770,8 +778,8 @@ LAogICJzaWduYXR1cmUiOiAiY3J5cHRvLWFzeW1tZXRyaWMtc2ln...
               <span class="edition-tag">Default</span>
             </div>
             <p>
-              Live 30 FPS C-arm fluoroscopy capture with the Intraoperative PACS, CT/MRI review
-              and 3D multi-planar reconstruction.
+              Live 30 FPS C-arm fluoroscopy with real-time DSA and vascular roadmapping, plus the
+              Intraoperative PACS, CT/MRI review and 3D multi-planar reconstruction.
             </p>
             <span class="edition-file">Live_Cero_Setup.exe · ~195 MB</span>
           </div>

@@ -1,13 +1,16 @@
 # Omni Cero
 
-> Omni Cero is an offline Windows software workstation for intraoperative medical imaging and surgical navigation. It ships as two editions: Live C-arm + Cero (live 30 FPS C-arm fluoroscopy capture, preoperative CT/MRI review with 3D multi-planar reconstruction, embedded DICOM PACS archive) and XVR + Cero Integrated (the Cero suite combined with 3D XVR Surgical Navigation — where XVR stands for X-ray Volume Registration, a neural 2D/3D registration technique that aligns live fluoroscopy frames with preoperative 3D volumes for sub-millimeter, tracker-free guidance).
+> Omni Cero is an offline Windows software workstation for intraoperative medical imaging and surgical navigation. It ships as two editions: Live C-arm + Cero (live 30 FPS C-arm fluoroscopy capture with real-time Digital Subtraction Angiography and vascular roadmapping, preoperative CT/MRI review with 3D multi-planar reconstruction, embedded DICOM PACS archive) and XVR + Cero Integrated (the Cero suite combined with 3D XVR Surgical Navigation — where XVR stands for X-ray Volume Registration, a neural 2D/3D registration technique that aligns live fluoroscopy frames with preoperative 3D volumes for sub-millimeter, tracker-free guidance).
 
 Key facts:
 
 - Applications: Live C-Arm Video Station (OmniCero_LiveCarm.exe), 3D XVR Surgical Navigation (OmniCero_XVR_Navigation.exe), Intraoperative PACS & 3D MPR (OmniCero.exe)
-- Platform: Windows 10/11 (64-bit), 8 GB RAM minimum (16 GB recommended for 3D CT), 2.5 GB disk space
+- Live C-arm imaging: real-time DSA with motion-corrected mask subtraction, vascular roadmapping with automatic peak opacification tracking, last-image hold, 30 FPS cine loop replay, asynchronous 16-bit DICOM Part 10 XA capture
+- Sterile table-side control: zero-install web console on any iPad/iPhone/Android browser, paired by QR code, fully offline over an embedded local WebSocket server — no app store, internet or external router needed
+- Platform: Windows 10/11 (64-bit), 4 GB RAM minimum for the Live C-arm edition (16 GB recommended for 3D CT), 2.5 GB disk space, no dedicated GPU required (AVX2 CPU pipeline)
 - Licensing: Ed25519-signed license files, hardware-bound to motherboard, CPU and system UUID; fully offline
 - Connectivity: 100% offline — no telemetry, no cloud services, no activation servers
+- Bundled runtimes: Weasis diagnostic viewer (with Java JRE) included — zero runtime prerequisites to install
 - Accuracy claims: sub-millimeter target error (< 0.8 mm MTRE), < 18 ms inference latency
 - Compatibility: C-arms from Siemens Healthineers, GE Healthcare, Philips and Ziehm Imaging; any USB UVC capture card with HDMI, DVI, BNC or RCA input
 
