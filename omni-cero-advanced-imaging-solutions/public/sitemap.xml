@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://cero.omniide.com/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cero.omniide.com/assets/cero-clinical-hero.jpg</image:loc>
+      <image:title>Omni Cero Surgical C-Arm and Digital Radiography Workstation</image:title>
+      <image:caption>Omni Cero intraoperative imaging in operating room environment</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cero.omniide.com/assets/logo.png</image:loc>
+      <image:title>Omni Cero by Omni IDE Official Logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/products/omni-cero-droc</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://cero.omniide.com/assets/omni-cero-droc.png</image:loc>
+      <image:title>OMNI CERO DROC Flat-Panel Digital Radiography Acquisition Software</image:title>
+      <image:caption>India's first multi-brand DROC software compatible with 8 detector brands</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/products/live-cero</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://cero.omniide.com/assets/livecarmstreamer.png</image:loc>
+      <image:title>LIVE CERO 30 FPS Live C-Arm Fluoroscopy Capture and DSA</image:title>
+      <image:caption>Real-time digital subtraction angiography and sterile tablet console</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/products/xvr</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://cero.omniide.com/assets/xvr.png</image:loc>
+      <image:title>CERO XVR 3D Surgical Navigation Workstation</image:title>
+      <image:caption>Tracker-free neural 2D/3D fluoroscopy to CT/MRI registration</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/compatibility</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://cero.omniide.com/assets/workstation_ui.png</image:loc>
+      <image:title>Omni Cero Universal Hardware Compatibility Matrix</image:title>
+      <image:caption>Compatibility with 8 detector brands and 4 surgical C-arm manufacturers</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/products</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/about</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://cero.omniide.com/contact</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+</urlset>

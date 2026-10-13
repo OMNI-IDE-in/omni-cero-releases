@@ -1,0 +1,1 @@
+var e=`/assets/cero-clinical-hero-DmFjPi3i.jpg`;export{e as t};

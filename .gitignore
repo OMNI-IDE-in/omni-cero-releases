@@ -1,0 +1,17 @@
+node_modules/
+**/node_modules/
+.output/
+**/.output/
+dist/
+**/dist/
+.nitro/
+**/.nitro/
+.vinxi/
+**/.vinxi/
+.tanstack/
+**/.tanstack/
+.wrangler/
+**/.wrangler/
+*.log
+.DS_Store
+*.local

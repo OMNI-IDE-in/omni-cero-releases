@@ -1,23 +1,26 @@
 # Omni Cero
 
-> Omni Cero is an offline Windows software workstation for intraoperative medical imaging and surgical navigation. It ships as two editions: Live C-arm + Cero (live 30 FPS C-arm fluoroscopy capture with real-time Digital Subtraction Angiography and vascular roadmapping, preoperative CT/MRI review with 3D multi-planar reconstruction, embedded DICOM PACS archive) and XVR + Cero Integrated (the Cero suite combined with 3D XVR Surgical Navigation — where XVR stands for X-ray Volume Registration, a neural 2D/3D registration technique that aligns live fluoroscopy frames with preoperative 3D volumes for sub-millimeter, tracker-free guidance).
+> Omni Cero is an offline Windows medical software workstation for digital radiography acquisition (DROC), intraoperative C-arm imaging, and tracker-free 3D surgical navigation. It is engineered in Bengaluru, India by Omni IDE.
 
-Key facts:
+Key Applications:
 
-- Applications: Live C-Arm Video Station (OmniCero_LiveCarm.exe), 3D XVR Surgical Navigation (OmniCero_XVR_Navigation.exe), Intraoperative PACS & 3D MPR (OmniCero.exe)
-- Live C-arm imaging: real-time DSA with motion-corrected mask subtraction, vascular roadmapping with automatic peak opacification tracking, last-image hold, 30 FPS cine loop replay, asynchronous 16-bit DICOM Part 10 XA capture
-- Sterile table-side control: zero-install web console on any iPad/iPhone/Android browser, paired by QR code, fully offline over an embedded local WebSocket server — no app store, internet or external router needed
-- Platform: Windows 10/11 (64-bit), 4 GB RAM minimum for the Live C-arm edition (16 GB recommended for 3D CT), 2.5 GB disk space, no dedicated GPU required (AVX2 CPU pipeline)
-- Licensing: Ed25519-signed license files, hardware-bound to motherboard, CPU and system UUID; fully offline
-- Connectivity: 100% offline — no telemetry, no cloud services, no activation servers
-- Bundled runtimes: Weasis diagnostic viewer (with Java JRE) included — zero runtime prerequisites to install
-- Accuracy claims: sub-millimeter target error (< 0.8 mm MTRE), < 18 ms inference latency
-- Compatibility: C-arms from Siemens Healthineers, GE Healthcare, Philips and Ziehm Imaging; any USB UVC capture card with HDMI, DVI, BNC or RCA input
+1. **OMNI CERO DROC** (`OmniCero_DROC_Production_Setup.exe`): India's first multi-brand Digital Radiography Acquisition software. Connects flat-panel detectors from 8 leading global manufacturers (iRay Technology, Varex Imaging, Vieworks, DRTECH, Rayence, Canon Medical, Carestream, Teledyne DALSA). Includes sub-second exposure preview, AED sync, DICOM C-STORE, Modality Worklist (MWL), and LAN archiving.
+2. **LIVE CERO** (`Live_Cero_Setup.exe`): Live 30 FPS C-arm fluoroscopy capture with real-time Digital Subtraction Angiography (DSA), vascular roadmapping, sterile table-side tablet console via offline QR-code WebSocket, last-image hold, and cine loop replay. Compatible with C-arms from Siemens Healthineers, GE Healthcare, Philips, and Ziehm Imaging via USB UVC.
+3. **CERO XVR** (`XVR_Cero_Setup.exe`): 3D XVR Surgical Navigation — X-ray Volume Registration neural 2D/3D registration fusing live fluoroscopy frames with preoperative CT/MRI volumes for sub-millimeter target accuracy (< 0.8 mm MTRE, < 18 ms latency) without optical tracking cameras or fiducials.
 
-## Links
+Key Specifications:
+- Platform: Windows 10/11 (64-bit), 4 GB RAM minimum (16 GB for 3D CT volumes), 2.5 GB disk space, AVX2 CPU instruction pipeline, no dedicated GPU required
+- Connectivity: 100% offline — zero cloud services, zero telemetry, zero activation servers, zero patient data egress
+- Licensing: Ed25519-signed node-locked license files bound to motherboard, CPU, and hardware UUID; verified on-device mathematically
 
-- [Homepage](https://cero.omniide.com/): product overview, story, FAQ, and download
-- [Contact & licensing](https://cero.omniide.com/contact.html): software access, license requests and support — contact@omniide.com, +91 98453 25913
-- [Live C-arm + Cero installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe): Live_Cero_Setup.exe, ~195 MB (default edition)
-- [XVR + Cero Integrated installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/XVR_Cero_Setup.exe): XVR_Cero_Setup.exe, ~319 MB
-- [Parent company](https://omniide.com/): Omni IDE
+Official Links:
+- [Homepage](https://cero.omniide.com/): Product overview, specs, and download
+- [OMNI CERO DROC](https://cero.omniide.com/products/omni-cero-droc): Flat-panel detector acquisition software
+- [LIVE CERO](https://cero.omniide.com/products/live-cero): 30 FPS fluoroscopy and DSA video station
+- [CERO XVR](https://cero.omniide.com/products/xvr): 3D XVR surgical navigation
+- [Hardware Compatibility](https://cero.omniide.com/compatibility): Detectors, C-arms, and capture cards
+- [Contact & Support](https://cero.omniide.com/contact): contact@omniide.com, +91 98453 25913
+- [OMNI CERO DROC Installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe)
+- [LIVE CERO Installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe)
+- [CERO XVR Installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/XVR_Cero_Setup.exe)
+- [Parent Company](https://omniide.com/): Omni IDE, Bengaluru, India

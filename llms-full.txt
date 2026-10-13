@@ -1,0 +1,52 @@
+# Omni Cero — Complete Technical Documentation for LLM Indexing
+
+> Omni Cero is an offline Windows medical software workstation suite developed by Omni IDE in Bengaluru, India. It includes India's first multi-brand Digital Radiography Acquisition (DROC) software, live 30 FPS C-arm fluoroscopy capture with real-time Digital Subtraction Angiography (DSA), and tracker-free 3D surgical navigation.
+
+## 1. OMNI CERO DROC (Digital Radiography Acquisition Workstation)
+- **Role**: India's First Multi-Brand DROC Software for Worldwide Hospitals.
+- **Installer**: `https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe` (~195 MB).
+- **Supported Flat-Panel Detector Brands (8 Global Manufacturers)**:
+  1. **iRay Technology**: Venu 1717X, Mars 1417V Wireless, Venu 1417X, Mars 1717X Wireless, Jupi 1012X.
+  2. **Varex Imaging**: PaxScan 4336Wv, PaxScan 4343CB, PaxScan 3030X, PaxScan 2520DX, PaxScan 4343RC.
+  3. **Vieworks**: VIVIX-S 1417N, VIVIX-S 1717N, VIVIX-S 4343N, VIVIX-S 2530VW Wireless.
+  4. **DRTECH**: EVS 4343 Dual AED, RoseM 2430, Extremis 1012, EVS 3643 Wireless, EVS 2430.
+  5. **Rayence**: 1717SCC, 1417WCC Wireless, 1012WCC, 1417PCA, 1717SGC.
+  6. **Canon Medical**: CXDI-701C Wireless, CXDI-801C Wireless, CXDI-401C Compact, CXDI-710C Wireless.
+  7. **Carestream Health**: DRX-Plus 3543, DRX-Plus 4343, DRX-Core 3543, DRX-L Detector (Long Length).
+  8. **Teledyne DALSA**: Rad-icon 2055 CMOS, Xineos-2329, Shad-o-Box 6K HS, Rad-icon 1520, Xineos-1313.
+- **Exposure Preview**: Sub-second full-resolution preview with hardware Automatic Exposure Detection (AED).
+- **DICOM Networking**: DICOM 3.0 C-STORE to institutional PACS, Modality Worklist (MWL) query/retrieve, Storage Commitment, and DICOM Print.
+
+## 2. LIVE CERO (Live 30 FPS Fluoroscopy & Real-Time DSA Video Station)
+- **Role**: Intraoperative fluoroscopy acquisition and angiographic video processing.
+- **Installer**: `https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe` (~195 MB).
+- **C-Arm Compatibility**:
+  - **Siemens Healthineers**: Cios Alpha, Cios Select, Cios Flow, Siremobil Compact L, Arcadis Orbic / Avantic.
+  - **GE Healthcare**: OEC 9800 Plus, OEC 9900 Elite, OEC One CFD, OEC Elite CFD, Brivo OEC 850.
+  - **Philips Healthcare**: Veradius Unity Flat Detector, Zenition 50, Zenition 70, BV Pulsera, BV Endura.
+  - **Ziehm Imaging**: Ziehm Vision RFD, Ziehm Vision R, Ziehm Solo FD, Ziehm Vision FD.
+- **DSA Engine**: Motion-corrected mask subtraction running in real time at 30 FPS.
+- **Vascular Roadmapping**: Peak opacification lock with live catheter fluoroscopy overlay.
+- **Sterile Tablet Console**: Local Wi-Fi WebSocket control via dynamic QR-code pairing on any sterile tablet.
+
+## 3. CERO XVR (3D Surgical Navigation Workstation)
+- **Role**: Tracker-free 3D surgical guidance with neural 2D/3D X-ray Volume Registration.
+- **Installer**: `https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/XVR_Cero_Setup.exe` (~319 MB).
+- **Target Accuracy**: < 0.8 mm Mean Target Registration Error (MTRE).
+- **Inference Latency**: < 18 ms deep anatomical pose estimation per fluoroscopy frame.
+- **Hardware Architecture**: Zero optical tracking carts, zero patient tracking pins, zero sterile draping of camera stands.
+
+## 4. Workstation Architecture & Zero Cloud Security
+- **Operating System**: Windows 10 (64-bit), Windows 11 (64-bit).
+- **CPU**: Intel Core i5 / i7 or AMD Ryzen with AVX2 instruction support.
+- **GPU**: No dedicated GPU required; runs on standard integrated or discrete graphics.
+- **Security**: 100% offline. Zero telemetry, zero cloud dependencies, zero external network egress.
+- **Licensing**: Cryptographic Ed25519 node-locked license files bound to workstation motherboard, CPU ID, and hardware UUID.
+
+## 5. Contact & Headquarters
+- **Company**: Omni IDE (Omni Cero Medical Systems)
+- **Headquarters**: B-Block, Devgere, Kumbalagodu, Kengeri, Bengaluru, Karnataka 560060, India.
+- **Email**: contact@omniide.com
+- **Phone**: +91 98453 25913
+- **Website**: https://cero.omniide.com/
+- **Parent Website**: https://omniide.com/
