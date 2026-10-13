@@ -83,7 +83,7 @@ export function Brand() {
         src={logoImg}
         alt="Omni Cero Medical Systems"
         className="brand-logo"
-        style={{ height: "36px", width: "auto", objectFit: "contain" }}
+        style={{ height: "32px", width: "auto", objectFit: "contain" }}
       />
       <div>
         <div className="brand-name">
