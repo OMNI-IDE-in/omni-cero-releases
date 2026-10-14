@@ -6,48 +6,219 @@ import logoImg from "@/assets/logo.png";
 
 export { logoImg, liveImg, xvrImg, workstationImg, drocImg };
 
-export const detectors = [
+export interface Detector {
+  name: string;
+  category: string;
+  models: string[];
+  integration: string;
+  protocol?: string;
+}
+
+export const detectors: Detector[] = [
+  {
+    name: "Varex Imaging / PerkinElmer",
+    category: "Amorphous Silicon & CMOS",
+    models: ["PaxScan 4336Wv", "PaxScan 4343CB", "PaxScan 3030X", "PaxScan 2520DX", "PaxScan 4343RC"],
+    integration: "XISL.dll, gbif64.dll, Acq.h (Native C++ / C# P/Invoke)",
+    protocol: "Gigabit Ethernet / Optical Fiber direct DMA",
+  },
   {
     name: "iRay Technology",
     category: "Wireless & Tethered FPD",
-    models: ["Venu 1717X", "Mars 1417V Wireless", "Venu 1417X", "Mars 1717X Wireless", "Jupi 1012X"],
-  },
-  {
-    name: "Varex Imaging",
-    category: "Amorphous Silicon & CMOS",
-    models: ["PaxScan 4336Wv", "PaxScan 4343CB", "PaxScan 3030X", "PaxScan 2520DX", "PaxScan 4343RC"],
+    models: ["Mars 1417V", "Mars 1717V", "Venu 1717X", "Venu 1417X", "Jupi 1012X"],
+    integration: "IRayFpdSys.dll, IRayCmdDef.h, iSync+ AED",
+    protocol: "GenICam GigE UDP (:28000) & AP Wi-Fi Direct",
   },
   {
     name: "Vieworks",
     category: "Direct Deposited CsI",
     models: ["VIVIX-S 1417N", "VIVIX-S 1717N", "VIVIX-S 4343N", "VIVIX-S 2530VW Wireless"],
+    integration: "Vieworks.vivix.net.dll, Anytime AED",
+    protocol: "Inside AP interface & high-speed wired Ethernet",
   },
   {
-    name: "DRTECH",
+    name: "DRTECH Corporation",
     category: "Dual AED & Mammography",
-    models: ["EVS 4343 Dual AED", "RoseM 2430", "Extremis 1012", "EVS 3643 Wireless", "EVS 2430"],
+    models: ["EVS 3643", "EVS 4343", "RoseM 2430 Mammo", "Extremis 1012", "EVS 2430"],
+    integration: "EVS_SDK_x64.dll, EVS_SDK.dll, ECali1 calibration engine",
+    protocol: "Hardware Lossless Compression & Dual AED sync",
   },
   {
     name: "Rayence",
     category: "Carbon Fiber Cassette-Sized",
-    models: ["1717SCC", "1417WCC Wireless", "1012WCC", "1417PCA", "1717SGC"],
+    models: ["Xmaru 1417WCA", "Rayence 1717SCC", "1417WCC Wireless", "1012WCC", "1717SGC"],
+    integration: "Xmaru SDK, Open Mellzi socket protocol",
+    protocol: "Cassette-size retrofitting & high-sensitivity CsI",
   },
   {
-    name: "Canon Medical",
-    category: "Lightweight High-DQE",
-    models: ["CXDI-701C Wireless", "CXDI-801C Wireless", "CXDI-401C Compact", "CXDI-710C Wireless"],
-  },
-  {
-    name: "Carestream",
-    category: "Cesium Iodide Wireless",
-    models: ["DRX-Plus 3543", "DRX-Plus 4343", "DRX-Core 3543", "DRX-L Detector (Long Length)"],
+    name: "CareRay",
+    category: "Direct-Growth Needle CsI",
+    models: ["CareView 1500L", "CareView 1800L", "CareView 750M"],
+    integration: "CareRay OEM API, CareView SDK protocol",
+    protocol: "Ultra-low dose needle-structured CsI imaging",
   },
   {
     name: "Teledyne DALSA",
     category: "CMOS Intraoperative & NDT",
-    models: ["Rad-icon 2055 CMOS", "Xineos-2329", "Shad-o-Box 6K HS", "Rad-icon 1520", "Xineos-1313"],
+    models: ["Rad-icon 2022 CMOS", "Rad-icon 2055 CMOS", "Xineos-2329", "Shad-o-Box 6K HS"],
+    integration: "DALSA Sapera LT, iBEX C++ FPD Plugin",
+    protocol: "High-resolution 49.5 µm pixel pitch & 30 FPS CMOS",
+  },
+  {
+    name: "Canon Medical",
+    category: "Lightweight High-DQE Wireless",
+    models: ["CXDI-701C Wireless", "CXDI-801C Wireless", "CXDI-401C Compact", "CXDI-710C Wireless"],
+    integration: "Canon CXDI acquisition protocol profile",
+    protocol: "Ultra-lightweight IPX6 water resistance profile",
+  },
+  {
+    name: "Carestream Health",
+    category: "Cesium Iodide Wireless Cassette",
+    models: ["DRX-Plus 3543", "DRX-Plus 4343", "DRX-Core 3543", "DRX-L Detector (Long Length)"],
+    integration: "Carestream DRX interface profile",
+    protocol: "Modular battery & rapid single-exposure long-bone",
+  },
+  {
+    name: "Thales Group",
+    category: "Dynamic RF & Digital Radiography",
+    models: ["Pixium Portable 3543", "Pixium 4343", "Pixium RF 4343"],
+    integration: "Pixium AED interface profile, Thales FPD Driver",
+    protocol: "Dual-mode fluoroscopy and radiographic acquisition",
+  },
+  {
+    name: "OmniRef Lab 1024",
+    category: "Calibrated In-Engine Reference Synthetic FPD",
+    models: ["OmniRef 1024 Physical QA Simulator"],
+    integration: "In-engine 16-bit physical simulator engine",
+    protocol: "100% offline QA, pipeline testing & dry-run validation",
   },
 ];
+
+export interface Generator {
+  name: string;
+  series: string[];
+  interface: string;
+  notes: string;
+}
+
+export const generators: Generator[] = [
+  {
+    name: "CPI (Communications & Power Industries)",
+    series: ["Indico 100 Series", "Rad-X Series", "CMP 200 / CMP 200 DR"],
+    interface: "RS-232 Serial / TCP Protocol",
+    notes: "Full anatomical program (APR) parameter sync with kV/mA/ms interlock handshake.",
+  },
+  {
+    name: "Sedecal",
+    series: ["Neomed Series", "SHF Series (SHF-310, SHF-510)"],
+    interface: "Sedecal High-Frequency Generator Protocol (CAN / RS-232)",
+    notes: "High-frequency precision power curve control with automatic exposure interlock.",
+  },
+  {
+    name: "Gulmay",
+    series: ["CP Series", "Medical HF Series (CP160, CP225)"],
+    interface: "Gulmay C++ Native Generator Driver",
+    notes: "Industrial and medical high-voltage continuous & pulsed generation control.",
+  },
+  {
+    name: "Poskom",
+    series: ["PXM Series (PXM-20BT, PXM-40BT)", "EcoTron Series"],
+    interface: "Poskom RS-232 / TTL Interlock Handshake",
+    notes: "Portable and battery-powered mobile radiographic generator coordination.",
+  },
+  {
+    name: "Omni Cero Virtual Generator",
+    series: ["120 kVp / 250 mA Virtual Anode Controller"],
+    interface: "Integrated Real-Time Anode Heat Unit (HU) Tracker",
+    notes: "Built-in thermal dissipation simulator for zero-radiation workstation QA.",
+  },
+];
+
+export interface FilmImager {
+  name: string;
+  models: string[];
+  protocol: string;
+  formats: string[];
+}
+
+export const filmImagers: FilmImager[] = [
+  {
+    name: "Fuji Medical",
+    models: ["DryPix 4000", "DryPix 7000", "DryPix Smart", "DryPix Edge"],
+    protocol: "DICOM Basic Grayscale Print Management SCU",
+    formats: ["14x17 in", "11x14 in", "10x12 in", "8x10 in"],
+  },
+  {
+    name: "Carestream / Kodak",
+    models: ["DryView 5700", "DryView 5950", "DryView 6850"],
+    protocol: "DICOM Basic Grayscale Print Management SCU",
+    formats: ["14x17 in", "11x14 in", "8x10 in", "Mammo Dmax > 4.0"],
+  },
+  {
+    name: "Agfa HealthCare",
+    models: ["Drystar 5302", "Drystar 5503", "Drystar AXYS"],
+    protocol: "DICOM Basic Grayscale Print Management SCU",
+    formats: ["14x17 in", "11x14 in", "10x12 in", "8x10 in blue base"],
+  },
+  {
+    name: "Sony Healthcare",
+    models: ["FilmStation UP-DF550", "FilmStation UP-DF750"],
+    protocol: "DICOM Basic Grayscale Print Management SCU",
+    formats: ["14x17 in", "11x14 in", "10x12 in", "8x10 in"],
+  },
+];
+
+export interface VideoGrabber {
+  chipset: string;
+  driver: string;
+  interface: string;
+  useCase: string;
+}
+
+export const videoGrabbers: VideoGrabber[] = [
+  {
+    chipset: "Universal USB 3.0 / 3.2 UVC",
+    driver: "Windows Native DirectShow / Media Foundation",
+    interface: "HDMI 2.0 / DVI-D / BNC Loop-Through",
+    useCase: "Zero-driver plug-and-play capture on any Windows 10/11 laptop or desktop.",
+  },
+  {
+    chipset: "Blackmagic Design DeckLink",
+    driver: "DeckLink DirectShow Filters / Desktop Video SDK",
+    interface: "3G-SDI / 12G-SDI / HDMI Broadcast",
+    useCase: "Ultra-low latency sub-frame acquisition (< 8 ms) for hybrid ORs.",
+  },
+  {
+    chipset: "UTV007 / EasyCap",
+    driver: "UTV007_Drivers (Install_EasyCap_Windows11.bat included)",
+    interface: "Composite BNC / RCA Analog to USB 2.0",
+    useCase: "Cost-effective digitization of legacy analog surgical C-arm video feeds.",
+  },
+  {
+    chipset: "Gadmei UTV3301",
+    driver: "drivers/Gadmei_UTV3301/ package",
+    interface: "TV Box Tuner / Composite BNC Capture",
+    useCase: "Legacy TV box capture hardware integration for retrofitted surgical suites.",
+  },
+];
+
+export const pacsAndTracking = {
+  pacsServers: [
+    { name: "GE Healthcare Centricity PACS", port: 11112, role: "DICOM C-STORE / C-MOVE SCU" },
+    { name: "Philips IntelliSpace PACS", port: 11112, role: "DICOM C-STORE / C-MOVE SCU" },
+    { name: "Siemens Healthineers syngo.plaza", port: 11112, role: "DICOM C-STORE / C-MOVE SCU" },
+    { name: "Orthanc Open PACS", port: 11112, role: "DICOM C-STORE / MWL Server" },
+    { name: "dcm4chee Archive", port: 11112, role: "Enterprise VNA & DICOM Archive" },
+  ],
+  modalityWorklist: {
+    service: "DICOM MWL C-FIND SCU",
+    integration: "Automatic query of scheduled patient procedures from hospital HIS / RIS / EMR",
+  },
+  opticalTracking: {
+    engine: "OmniCero_OpticalTracker (60 Hz 6-DOF)",
+    markerFormats: "ArUco / ChArUco passive optical marker arrays & calibrated tool rigid bodies",
+  },
+};
 
 export const carmCompatibility = [
   {
@@ -92,6 +263,8 @@ export function filterDetectors(query: string) {
     (d) =>
       d.name.toLowerCase().includes(search) ||
       d.category.toLowerCase().includes(search) ||
+      d.integration.toLowerCase().includes(search) ||
+      (d.protocol && d.protocol.toLowerCase().includes(search)) ||
       d.models.some((m) => m.toLowerCase().includes(search))
   );
 }
@@ -108,31 +281,35 @@ export const products = [
     fileSize: "~215 MB",
     download: "https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe",
     description:
-      "One unified acquisition platform. A universe of flat-panel detectors. India's own DROC software, engineered to connect leading flat-panel detectors with intuitive clinical exposure controls and native DICOM PACS review.",
+      "One unified acquisition platform. A universe of flat-panel detectors. India's own DROC software, engineered to connect 10 global flat-panel detector manufacturers, high-frequency X-ray generators, and DICOM dry laser film imagers with intuitive clinical exposure controls and native PACS review.",
     short: "Digital radiography acquisition, completely unified.",
     highlights: [
-      "Compatible with 8 major detector manufacturers",
+      "Compatible with 10 global detector manufacturers + Reference QA Simulator",
+      "High-Frequency X-Ray Generator Control: CPI, Sedecal, Gulmay, Poskom",
+      "DICOM Dry Laser Print Management SCU: Fuji, Carestream, Agfa, Sony",
       "Sub-second exposure preview & instant AED synchronization",
-      "Native DICOM C-STORE, Modality Worklist (MWL) & local PACS archive",
-      "Interactive image processing: edge enhancement, contrast LUT, bone presets",
+      "Direct DLL & SDK architecture: XISL.dll, IRayFpdSys.dll, EVS_SDK, vivix.net",
       "100% offline workstation operation — zero cloud subscription",
     ],
     features: [
-      "Multi-Brand Detector Compatibility",
-      "Unified Acquisition & Exposure Console",
-      "Integrated Intraoperative PACS & MPR",
+      "10-Brand Detector SDK Integration",
+      "Unified Generator & Exposure Console",
+      "DICOM Dry Film Printing & Local PACS",
     ],
     featureDescriptions: [
-      "Direct driver and SDK integration for iRay, Varex, Vieworks, DRTECH, Rayence, Canon Medical, Carestream, and Teledyne DALSA detectors in a single unified UI.",
-      "Accelerated clinical workflow with automatic exposure detection (AED), patient worklist management, anatomical presets, and real-time contrast correction.",
-      "Embedded DICOM viewing engine with multi-planar reconstruction (axial, coronal, sagittal), Hounsfield measurement tools, and local LAN PACS archive.",
+      "Direct driver and native SDK integration for Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, and Thales Group detectors in a single unified interface.",
+      "High-frequency X-ray generator synchronization (CPI, Sedecal, Gulmay, Poskom) coordinating kVp, mA, exposure time, and thermal anode heat unit tracking.",
+      "Embedded DICOM viewing engine with multi-planar reconstruction (MPR), DICOM C-STORE, Modality Worklist (MWL C-FIND), and DICOM Dry Laser Print Management SCU (Fuji, Carestream, Agfa, Sony).",
     ],
     specs: {
-      "Supported Detectors": "iRay, Varex, Vieworks, DRTECH, Rayence, Canon, Carestream, Teledyne DALSA",
+      "Supported Detectors": "10 Brands: Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales (+ OmniRef Lab 1024 Simulator)",
+      "X-Ray Generators": "CPI (Indico/Rad-X), Sedecal (Neomed/SHF), Gulmay (CP), Poskom (PXM/EcoTron), Virtual Anode",
+      "DICOM Film Imagers": "Fuji DryPix, Carestream DryView, Agfa Drystar, Sony FilmStation",
       "Platform": "Windows 10 / 11 (64-bit)",
       "Minimum Hardware": "4 GB RAM (8 GB recommended), Intel Core i3/i5 (AVX2 supported)",
-      "Licensing": "Ed25519 node-locked hardware activation (offline)",
-      "Connectivity": "100% Offline, DICOM C-STORE / Modality Worklist over Hospital LAN",
+      "Licensing": "Ed25519 node-locked hardware activation (100% offline)",
+      "Hospital PACS": "Port 11112: GE Centricity, Philips IntelliSpace, Siemens syngo.plaza, Orthanc, dcm4chee",
+      "Connectivity": "100% Offline, DICOM C-STORE / Modality Worklist / Print SCU over Hospital LAN",
     },
   },
   {

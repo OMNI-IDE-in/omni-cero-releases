@@ -26,7 +26,7 @@ export const Route = createFileRoute("/products/")({
                 "position": 1,
                 "name": "OMNI CERO DROC",
                 "url": "https://cero.omniide.com/products/omni-cero-droc",
-                "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software supporting 8 detector brands.",
+                "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software supporting 10 detector brands, high-frequency X-ray generators, and DICOM dry laser film imagers.",
               },
               {
                 "@type": "ListItem",

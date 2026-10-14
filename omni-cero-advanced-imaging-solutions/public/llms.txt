@@ -4,8 +4,8 @@
 
 Key Applications:
 
-1. **OMNI CERO DROC** (`OmniCero_DROC_Production_Setup.exe`): India's first multi-brand Digital Radiography Acquisition software. Connects flat-panel detectors from 8 leading global manufacturers (iRay Technology, Varex Imaging, Vieworks, DRTECH, Rayence, Canon Medical, Carestream, Teledyne DALSA). Includes sub-second exposure preview, AED sync, DICOM C-STORE, Modality Worklist (MWL), and LAN archiving.
-2. **LIVE CERO** (`Live_Cero_Setup.exe`): Live 30 FPS C-arm fluoroscopy capture with real-time Digital Subtraction Angiography (DSA), vascular roadmapping, sterile table-side tablet console via offline QR-code WebSocket, last-image hold, and cine loop replay. Compatible with C-arms from Siemens Healthineers, GE Healthcare, Philips, and Ziehm Imaging via USB UVC.
+1. **OMNI CERO DROC** (`OmniCero_DROC_Production_Setup.exe`): India's first multi-brand Digital Radiography Acquisition software. Connects flat-panel detectors from 10 leading global manufacturers (Varex Imaging, iRay Technology, Vieworks, DRTECH Corporation, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream Health, Thales Group + OmniRef Lab 1024 QA simulator). Direct SDK/DLL support for XISL.dll, IRayFpdSys.dll, EVS_SDK, and Vivix.net. Features integrated exposure console for high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), DICOM dry laser print management SCU (Fuji Medical, Carestream/Kodak, Agfa HealthCare, Sony Healthcare), sub-second exposure preview, AED sync, DICOM C-STORE, Modality Worklist (MWL C-FIND), and hospital LAN archiving (Port 11112).
+2. **LIVE CERO** (`Live_Cero_Setup.exe`): Live 30 FPS C-arm fluoroscopy capture with real-time Digital Subtraction Angiography (DSA), vascular roadmapping, sterile table-side tablet console via offline QR-code WebSocket, last-image hold, and cine loop replay. Compatible with C-arms from Siemens Healthineers, GE Healthcare, Philips Healthcare, and Ziehm Imaging via USB UVC, Blackmagic DeckLink SDI, UTV007, or Gadmei UTV3301.
 3. **CERO XVR** (`XVR_Cero_Setup.exe`): 3D XVR Surgical Navigation — X-ray Volume Registration neural 2D/3D registration fusing live fluoroscopy frames with preoperative CT/MRI volumes for sub-millimeter target accuracy (< 0.8 mm MTRE, < 18 ms latency) without optical tracking cameras or fiducials.
 
 Key Specifications:
@@ -18,7 +18,7 @@ Official Links:
 - [OMNI CERO DROC](https://cero.omniide.com/products/omni-cero-droc): Flat-panel detector acquisition software
 - [LIVE CERO](https://cero.omniide.com/products/live-cero): 30 FPS fluoroscopy and DSA video station
 - [CERO XVR](https://cero.omniide.com/products/xvr): 3D XVR surgical navigation
-- [Hardware Compatibility](https://cero.omniide.com/compatibility): Detectors, C-arms, and capture cards
+- [Hardware Compatibility](https://cero.omniide.com/compatibility): 10 Detector brands, 4 generators, 4 dry film imagers, C-arms, and capture hardware
 - [Contact & Support](https://cero.omniide.com/contact): contact@omniide.com, +91 98453 25913
 - [OMNI CERO DROC Installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe)
 - [LIVE CERO Installer](https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/Live_Cero_Setup.exe)

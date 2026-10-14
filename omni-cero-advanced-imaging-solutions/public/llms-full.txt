@@ -5,17 +5,32 @@
 ## 1. OMNI CERO DROC (Digital Radiography Acquisition Workstation)
 - **Role**: India's First Multi-Brand DROC Software for Worldwide Hospitals.
 - **Installer**: `https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe` (~195 MB).
-- **Supported Flat-Panel Detector Brands (8 Global Manufacturers)**:
-  1. **iRay Technology**: Venu 1717X, Mars 1417V Wireless, Venu 1417X, Mars 1717X Wireless, Jupi 1012X.
-  2. **Varex Imaging**: PaxScan 4336Wv, PaxScan 4343CB, PaxScan 3030X, PaxScan 2520DX, PaxScan 4343RC.
-  3. **Vieworks**: VIVIX-S 1417N, VIVIX-S 1717N, VIVIX-S 4343N, VIVIX-S 2530VW Wireless.
-  4. **DRTECH**: EVS 4343 Dual AED, RoseM 2430, Extremis 1012, EVS 3643 Wireless, EVS 2430.
-  5. **Rayence**: 1717SCC, 1417WCC Wireless, 1012WCC, 1417PCA, 1717SGC.
-  6. **Canon Medical**: CXDI-701C Wireless, CXDI-801C Wireless, CXDI-401C Compact, CXDI-710C Wireless.
-  7. **Carestream Health**: DRX-Plus 3543, DRX-Plus 4343, DRX-Core 3543, DRX-L Detector (Long Length).
-  8. **Teledyne DALSA**: Rad-icon 2055 CMOS, Xineos-2329, Shad-o-Box 6K HS, Rad-icon 1520, Xineos-1313.
+- **Supported Flat-Panel Detector Brands (10 Global Manufacturers + QA Simulator)**:
+  1. **Varex Imaging / PerkinElmer**: PaxScan 4336Wv, PaxScan 4343CB, PaxScan 3030X, PaxScan 2520DX, PaxScan 4343RC. Interface: `XISL.dll`, `gbif64.dll`, `Acq.h` (Native C++ / C# P/Invoke).
+  2. **iRay Technology**: Mars 1417V, Mars 1717V, Venu 1717X, Venu 1417X, Jupi 1012X. Interface: `IRayFpdSys.dll`, `IRayCmdDef.h`, iSync+ AED, GenICam GigE UDP (`:28000`).
+  3. **Vieworks**: VIVIX-S 1417N, VIVIX-S 1717N, VIVIX-S 4343N, VIVIX-S 2530VW Wireless. Interface: `Vieworks.vivix.net.dll`, Anytime AED Inside AP interface.
+  4. **DRTECH Corporation**: EVS 3643, EVS 4343, RoseM 2430 Mammo, Extremis 1012, EVS 2430. Interface: `EVS_SDK_x64.dll`, `EVS_SDK.dll`, `ECali1` calibration engine.
+  5. **Rayence**: Xmaru 1417WCA, Rayence 1717SCC, 1417WCC Wireless, 1012WCC, 1717SGC. Interface: `Xmaru SDK` / Open Mellzi socket protocol.
+  6. **CareRay**: CareView 1500L, CareView 1800L, CareView 750M. Interface: CareRay OEM API / CareView SDK protocol.
+  7. **Teledyne DALSA**: Rad-icon 2022 CMOS, Rad-icon 2055 CMOS, Xineos-2329, Shad-o-Box 6K HS. Interface: DALSA Sapera LT / iBEX C++ FPD Plugin.
+  8. **Canon Medical**: CXDI-701C Wireless, CXDI-801C Wireless, CXDI-401C Compact, CXDI-710C Wireless. Interface: Canon CXDI acquisition protocol profile.
+  9. **Carestream Health**: DRX-Plus 3543, DRX-Plus 4343, DRX-Core 3543, DRX-L Detector (Long Length). Interface: Carestream DRX interface profile.
+  10. **Thales Group**: Pixium Portable 3543, Pixium 4343, Pixium RF 4343. Interface: Pixium AED interface profile / Thales FPD Driver.
+  + **OmniRef Lab 1024**: Calibrated Reference Synthetic FPD. In-engine 16-bit physical simulator for 100% offline QA and test bench automation.
+- **High-Frequency X-Ray Generators (4 Manufacturers + Virtual Anode)**:
+  1. **CPI (Communications & Power Industries)**: Indico 100, Rad-X Series, CMP 200 (RS-232 Serial / TCP Protocol).
+  2. **Sedecal**: Neomed Series, SHF Series (SHF-310, SHF-510) via Sedecal High-Frequency CAN / RS-232 Protocol.
+  3. **Gulmay**: CP Series, Medical HF Series (CP160, CP225) via Gulmay C++ Native Driver.
+  4. **Poskom**: PXM Series (PXM-20BT, PXM-40BT), EcoTron Series via RS-232 / TTL Interlock Handshake.
+  + **Omni Cero Virtual Generator**: 120 kVp, 250 mA Virtual Anode Controller with real-time thermal Anode Heat Unit (HU) tracking.
+- **DICOM Dry Laser Film Imagers (4 Manufacturers)**:
+  1. **Fuji Medical**: DryPix 4000, DryPix 7000, DryPix Smart, DryPix Edge (DICOM Basic Grayscale Print SCU).
+  2. **Carestream / Kodak**: DryView 5700, DryView 5950, DryView 6850 (DICOM Basic Grayscale Print SCU).
+  3. **Agfa HealthCare**: Drystar 5302, Drystar 5503, Drystar AXYS (DICOM Basic Grayscale Print SCU).
+  4. **Sony Healthcare**: FilmStation UP-DF550, UP-DF750 (DICOM Basic Grayscale Print SCU).
+  - Supported Film Formats: 14x17 in, 11x14 in, 10x12 in, 8x10 in, High-Dmax Mammo.
 - **Exposure Preview**: Sub-second full-resolution preview with hardware Automatic Exposure Detection (AED).
-- **DICOM Networking**: DICOM 3.0 C-STORE to institutional PACS, Modality Worklist (MWL) query/retrieve, Storage Commitment, and DICOM Print.
+- **DICOM PACS Networking (Port 11112)**: DICOM 3.0 C-STORE to GE Centricity, Philips IntelliSpace, Siemens syngo.plaza, Orthanc, and dcm4chee; Modality Worklist (MWL C-FIND) integration with hospital HIS/RIS.
 
 ## 2. LIVE CERO (Live 30 FPS Fluoroscopy & Real-Time DSA Video Station)
 - **Role**: Intraoperative fluoroscopy acquisition and angiographic video processing.
@@ -25,6 +40,11 @@
   - **GE Healthcare**: OEC 9800 Plus, OEC 9900 Elite, OEC One CFD, OEC Elite CFD, Brivo OEC 850.
   - **Philips Healthcare**: Veradius Unity Flat Detector, Zenition 50, Zenition 70, BV Pulsera, BV Endura.
   - **Ziehm Imaging**: Ziehm Vision RFD, Ziehm Vision R, Ziehm Solo FD, Ziehm Vision FD.
+- **Video Capture Grabbers & Chipsets**:
+  - Universal USB 3.0 / 3.2 UVC: Zero-driver plug-and-play DirectShow / Windows Media Foundation.
+  - Blackmagic Design DeckLink: 3G-SDI / 12G-SDI / HDMI broadcast-grade sub-frame acquisition (< 8 ms).
+  - UTV007 / EasyCap: DirectShow USB 2.0 / BNC composite video ingestion.
+  - Gadmei UTV3301: TV Box Tuner / Composite BNC analog capture.
 - **DSA Engine**: Motion-corrected mask subtraction running in real time at 30 FPS.
 - **Vascular Roadmapping**: Peak opacification lock with live catheter fluoroscopy overlay.
 - **Sterile Tablet Console**: Local Wi-Fi WebSocket control via dynamic QR-code pairing on any sterile tablet.
@@ -35,6 +55,7 @@
 - **Target Accuracy**: < 0.8 mm Mean Target Registration Error (MTRE).
 - **Inference Latency**: < 18 ms deep anatomical pose estimation per fluoroscopy frame.
 - **Hardware Architecture**: Zero optical tracking carts, zero patient tracking pins, zero sterile draping of camera stands.
+- **Optical Tracking Support**: 60 Hz 6-DOF ArUco / ChArUco surgical marker engine for rigid-body verification.
 
 ## 4. Workstation Architecture & Zero Cloud Security
 - **Operating System**: Windows 10 (64-bit), Windows 11 (64-bit).
