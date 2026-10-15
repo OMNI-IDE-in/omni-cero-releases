@@ -95,9 +95,9 @@ export const Route = createFileRoute("/")({
             "applicationSubCategory": "Digital Radiography Acquisition (DROC)",
             "operatingSystem": "Windows 10, Windows 11 (64-bit)",
             "downloadUrl": "https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe",
-            "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software compatible with 10 global flat-panel detector manufacturers: Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, and Thales Group (+ OmniRef Lab 1024 simulator), high-frequency generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film imagers.",
+            "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software compatible with 11 global flat-panel detector manufacturers: Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group, and PIXXGEN Corporation (+ OmniRef Lab 1024 simulator), high-frequency generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film imagers.",
             "featureList": [
-              "Multi-brand flat-panel detector compatibility (10 global manufacturers + Reference Simulator)",
+              "Multi-brand flat-panel detector compatibility (11 global manufacturers + Reference Simulator)",
               "Integrated high-frequency X-ray generator control (CPI, Sedecal, Gulmay, Poskom)",
               "DICOM Dry Laser Print Management SCU (Fuji, Carestream, Agfa, Sony)",
               "Sub-second exposure preview and Automatic Exposure Detection (AED)",
@@ -157,7 +157,7 @@ export const Route = createFileRoute("/")({
                 "name": "What is OMNI CERO DROC?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "OMNI CERO DROC is India's first multi-brand Digital Radiography Acquisition software, natively connecting flat-panel detectors from 10 leading global manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group), high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film imagers (Fuji, Carestream, Agfa, Sony) into a unified acquisition and DICOM PACS workflow."
+                  "text": "OMNI CERO DROC is India's first multi-brand Digital Radiography Acquisition software, natively connecting flat-panel detectors from 11 leading global manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group, PIXXGEN), high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film imagers (Fuji, Carestream, Agfa, Sony) into a unified acquisition and DICOM PACS workflow."
                 }
               },
               {
@@ -273,7 +273,7 @@ function Home() {
           <span className="manufacturer">DRTECH</span>
           <span className="manufacturer canon">Canon</span>
           <Link to="/compatibility" className="nav-link flex items-center gap-2">
-            View all 10+ brands <ArrowRight className="size-3" />
+            View all 11+ brands <ArrowRight className="size-3" />
           </Link>
         </div>
       </section>
@@ -553,7 +553,7 @@ function Home() {
               },
               {
                 q: "What is OMNI CERO DROC?",
-                a: "OMNI CERO DROC is India's first multi-brand Digital Radiography Acquisition software. It natively connects flat-panel detectors from 10 leading global manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, and Thales Group), high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film printers (Fuji, Carestream, Agfa, Sony) into a single, cohesive clinical interface.",
+                a: "OMNI CERO DROC is India's first multi-brand Digital Radiography Acquisition software. It natively connects flat-panel detectors from 11 leading global manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group, and PIXXGEN), high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film printers (Fuji, Carestream, Agfa, Sony) into a single, cohesive clinical interface.",
               },
               {
                 q: "Does Omni Cero require internet or cloud access?",

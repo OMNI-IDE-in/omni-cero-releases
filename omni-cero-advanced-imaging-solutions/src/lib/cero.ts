@@ -86,6 +86,13 @@ export const detectors: Detector[] = [
     protocol: "Dual-mode fluoroscopy and radiographic acquisition",
   },
   {
+    name: "PIXXGEN Corporation (South Korea)",
+    category: "Cesium Iodide (CsI) Flat-Panel Detector",
+    models: ["PRUDENT Series 1717", "PRUDENT Series 1417"],
+    integration: "PIXXGEN SDK (PX_API.dll), Native C++ / C# API",
+    protocol: "Gigabit Ethernet & Wireless AP / Real-time AED sync",
+  },
+  {
     name: "OmniRef Lab 1024",
     category: "Calibrated In-Engine Reference Synthetic FPD",
     models: ["OmniRef 1024 Physical QA Simulator"],
@@ -259,14 +266,19 @@ export const captureHardware = [
 export function filterDetectors(query: string) {
   const search = query.trim().toLowerCase();
   if (!search) return detectors;
-  return detectors.filter(
-    (d) =>
-      d.name.toLowerCase().includes(search) ||
-      d.category.toLowerCase().includes(search) ||
-      d.integration.toLowerCase().includes(search) ||
-      (d.protocol && d.protocol.toLowerCase().includes(search)) ||
-      d.models.some((m) => m.toLowerCase().includes(search))
-  );
+  const terms = search.split(/\s+/).filter(Boolean);
+  return detectors.filter((d) => {
+    const haystack = [
+      d.name,
+      d.category,
+      d.integration,
+      d.protocol || "",
+      ...d.models,
+    ]
+      .join(" ")
+      .toLowerCase();
+    return terms.every((term) => haystack.includes(term));
+  });
 }
 
 export const products = [
@@ -281,28 +293,28 @@ export const products = [
     fileSize: "~215 MB",
     download: "https://github.com/OMNI-IDE-in/omni-cero-releases/releases/download/v2/OmniCero_DROC_Production_Setup.exe",
     description:
-      "One unified acquisition platform. A universe of flat-panel detectors. India's own DROC software, engineered to connect 10 global flat-panel detector manufacturers, high-frequency X-ray generators, and DICOM dry laser film imagers with intuitive clinical exposure controls and native PACS review.",
+      "One unified acquisition platform. A universe of flat-panel detectors. India's own DROC software, engineered to connect 11 global flat-panel detector manufacturers, high-frequency X-ray generators, and DICOM dry laser film imagers with intuitive clinical exposure controls and native PACS review.",
     short: "Digital radiography acquisition, completely unified.",
     highlights: [
-      "Compatible with 10 global detector manufacturers + Reference QA Simulator",
+      "Compatible with 11 global detector manufacturers + Reference QA Simulator",
       "High-Frequency X-Ray Generator Control: CPI, Sedecal, Gulmay, Poskom",
       "DICOM Dry Laser Print Management SCU: Fuji, Carestream, Agfa, Sony",
       "Sub-second exposure preview & instant AED synchronization",
-      "Direct DLL & SDK architecture: XISL.dll, IRayFpdSys.dll, EVS_SDK, vivix.net",
+      "Direct DLL & SDK architecture: XISL.dll, IRayFpdSys.dll, EVS_SDK, vivix.net, PX_API.dll",
       "100% offline workstation operation — zero cloud subscription",
     ],
     features: [
-      "10-Brand Detector SDK Integration",
+      "11-Brand Detector SDK Integration",
       "Unified Generator & Exposure Console",
       "DICOM Dry Film Printing & Local PACS",
     ],
     featureDescriptions: [
-      "Direct driver and native SDK integration for Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, and Thales Group detectors in a single unified interface.",
+      "Direct driver and native SDK integration for Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group, and PIXXGEN Corporation detectors in a single unified interface.",
       "High-frequency X-ray generator synchronization (CPI, Sedecal, Gulmay, Poskom) coordinating kVp, mA, exposure time, and thermal anode heat unit tracking.",
       "Embedded DICOM viewing engine with multi-planar reconstruction (MPR), DICOM C-STORE, Modality Worklist (MWL C-FIND), and DICOM Dry Laser Print Management SCU (Fuji, Carestream, Agfa, Sony).",
     ],
     specs: {
-      "Supported Detectors": "10 Brands: Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales (+ OmniRef Lab 1024 Simulator)",
+      "Supported Detectors": "11 Brands: Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales, PIXXGEN (+ OmniRef Lab 1024 Simulator)",
       "X-Ray Generators": "CPI (Indico/Rad-X), Sedecal (Neomed/SHF), Gulmay (CP), Poskom (PXM/EcoTron), Virtual Anode",
       "DICOM Film Imagers": "Fuji DryPix, Carestream DryView, Agfa Drystar, Sony FilmStation",
       "Platform": "Windows 10 / 11 (64-bit)",

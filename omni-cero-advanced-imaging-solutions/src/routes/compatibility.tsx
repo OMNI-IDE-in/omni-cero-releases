@@ -33,8 +33,8 @@ export const Route = createFileRoute("/compatibility")({
   component: Compatibility,
   head: () =>
     pageHead(
-      "Hardware Compatibility Matrix — 10 Detector Brands, Generators, Imagers & C-Arms | Omni Cero",
-      "Universal hardware compatibility matrix for Omni Cero DROC & surgical workstations: 10 flat-panel detector manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales), 4 high-frequency X-ray generators, 4 DICOM dry laser film imagers, and surgical C-arms.",
+      "Hardware Compatibility Matrix — 11 Detector Brands, Generators, Imagers & C-Arms | Omni Cero",
+      "Universal hardware compatibility matrix for Omni Cero DROC & surgical workstations: 11 flat-panel detector manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales, PIXXGEN), 4 high-frequency X-ray generators, 4 DICOM dry laser film imagers, and surgical C-arms.",
       "/compatibility",
       {
         "@context": "https://schema.org",
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/compatibility")({
           },
         ],
       },
-      "Omni Cero hardware compatibility, Varex PaxScan, iRay flat panel detector, Vieworks VIVIX, DRTECH EVS, Rayence 1717, CareRay CareView, Teledyne DALSA CMOS, Canon CXDI, Carestream DRX, Thales Pixium, CPI Indico generator, Sedecal SHF generator, Fuji DryPix, Carestream DryView, Agfa Drystar, Sony FilmStation, Siemens Cios, GE OEC 9900, Philips Zenition, Ziehm Vision"
+      "Omni Cero hardware compatibility, Varex PaxScan, iRay flat panel detector, Vieworks VIVIX, DRTECH EVS, Rayence 1717, CareRay CareView, Teledyne DALSA CMOS, Canon CXDI, Carestream DRX, Thales Pixium, PIXXGEN PRUDENT, CPI Indico generator, Sedecal SHF generator, Fuji DryPix, Carestream DryView, Agfa Drystar, Sony FilmStation, Siemens Cios, GE OEC 9900, Philips Zenition, Ziehm Vision"
     ),
 });
 
@@ -71,14 +71,14 @@ export function Compatibility() {
           </h1>
           <p>
             Omni Cero operates driver-free on standard Windows 10/11 hospital workstations. Direct
-            native SDK, DLL, and driver-level integration across 10 flat-panel detector brands,
+            native SDK, DLL, and driver-level integration across 11 flat-panel detector brands,
             high-frequency X-ray generators, DICOM dry laser film imagers, and intraoperative surgical
             C-arms.
           </p>
 
           <div className="flex flex-wrap items-center gap-2 mt-6 pt-2">
             <span className="text-[11px] font-bold px-3 py-1 rounded bg-background border border-border text-foreground flex items-center gap-1.5 shadow-sm">
-              <Layers className="size-3 text-primary" /> 10 Detector Brands
+              <Layers className="size-3 text-primary" /> 11 Detector Brands
             </span>
             <span className="text-[11px] font-bold px-3 py-1 rounded bg-background border border-border text-foreground flex items-center gap-1.5 shadow-sm">
               <Zap className="size-3 text-primary" /> 4 Generator Controllers
@@ -108,7 +108,7 @@ export function Compatibility() {
               <h2 className="text-3xl font-bold mt-2">OMNI CERO DROC Acquisition</h2>
               <p className="text-sm text-muted-foreground mt-2 max-w-xl">
                 Native manufacturer SDK &amp; DLL integration for wired, wireless, cassette-sized,
-                and CMOS flat-panel detectors across 10 leading global manufacturers.
+                and CMOS flat-panel detectors across 11 leading global manufacturers.
               </p>
             </div>
 

@@ -335,6 +335,45 @@ export function SiteFooter() {
               Intraoperative surgical navigation, digital radiography, and medical imaging workstations.
               Engineered in Bengaluru, India. Built for operating suites worldwide.
             </p>
+            <div className="mt-4 pt-1">
+              <span className="text-[10px] uppercase tracking-wider text-muted-foreground/75 font-semibold block mb-2">
+                Featured On
+              </span>
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <a
+                  href="https://launchbuff.com/products/omni-cero-4ucs0w"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Featured on LaunchBuff"
+                  className="inline-flex items-center transition-all duration-200 hover:opacity-85 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <img
+                    src="https://launchbuff.com/badge-featured-dark.svg"
+                    alt="Featured on LaunchBuff"
+                    style={{ height: "26px", width: "auto" }}
+                    className="h-[26px] w-auto rounded object-contain shadow-xs"
+                    width={256}
+                    height={80}
+                  />
+                </a>
+                <a
+                  href="https://www.producthunt.com/products/omni-cero?launch=omni-cero"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Featured on Product Hunt"
+                  className="inline-flex items-center transition-all duration-200 hover:opacity-85 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1281563&theme=dark"
+                    alt="Featured on Product Hunt"
+                    style={{ height: "26px", width: "auto" }}
+                    className="h-[26px] w-auto rounded object-contain shadow-xs"
+                    width={250}
+                    height={54}
+                  />
+                </a>
+              </div>
+            </div>
           </div>
           <div className="footer-col">
             <h3>OUR PRODUCTS</h3>

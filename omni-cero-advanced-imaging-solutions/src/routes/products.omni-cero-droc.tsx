@@ -6,8 +6,8 @@ export const Route = createFileRoute("/products/omni-cero-droc")({
   component: Droc,
   head: () =>
     pageHead(
-      "OMNI CERO DROC — India's First Multi-Brand DROC Software for 10 Global Flat-Panel Detectors, Generators & Laser Imagers",
-      "India's first multi-brand Digital Radiography Acquisition (DROC) software. Native SDK & DLL integration for 10 global detector manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales), high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film imagers (Fuji, Carestream, Agfa, Sony).",
+      "OMNI CERO DROC — India's First Multi-Brand DROC Software for 11 Global Flat-Panel Detectors, Generators & Laser Imagers",
+      "India's first multi-brand Digital Radiography Acquisition (DROC) software. Native SDK & DLL integration for 11 global detector manufacturers (Varex, iRay, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon, Carestream, Thales, PIXXGEN), high-frequency X-ray generators (CPI, Sedecal, Gulmay, Poskom), and DICOM dry laser film imagers (Fuji, Carestream, Agfa, Sony).",
       "/products/omni-cero-droc",
       {
         "@context": "https://schema.org",
@@ -42,9 +42,9 @@ export const Route = createFileRoute("/products/omni-cero-droc")({
                 "url": "https://omniide.com/",
               },
             },
-            "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software compatible with 10 global flat-panel detector manufacturers: Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, and Thales Group (+ OmniRef Lab 1024 QA simulator). Features integrated high-frequency X-ray generator control (CPI, Sedecal, Gulmay, Poskom), DICOM dry laser print management SCU (Fuji, Carestream, Agfa, Sony), sub-second AED preview, and 100% offline node-locked licensing.",
+            "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software compatible with 11 global flat-panel detector manufacturers: Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group, and PIXXGEN Corporation (+ OmniRef Lab 1024 QA simulator). Features integrated high-frequency X-ray generator control (CPI, Sedecal, Gulmay, Poskom), DICOM dry laser print management SCU (Fuji, Carestream, Agfa, Sony), sub-second AED preview, and 100% offline node-locked licensing.",
             "featureList": [
-              "Universal native integration with 10 leading flat-panel detector brands (wired & wireless)",
+              "Universal native integration with 11 leading flat-panel detector brands (wired & wireless)",
               "Integrated high-frequency X-ray generator exposure console (CPI, Sedecal, Gulmay, Poskom)",
               "DICOM Basic Grayscale Print Management SCU for Fuji, Carestream, Agfa, and Sony laser film imagers",
               "Sub-second exposure preview with Automatic Exposure Detection (AED) synchronization",

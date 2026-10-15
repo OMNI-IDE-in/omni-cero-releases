@@ -1,0 +1,1 @@
+import{c as e}from"./useSelector-BcTnCC3_.js";import{a as t,s as n}from"./index-BIuUjQ6N.js";var r=e();function i(){return(0,r.jsx)(t,{product:n[2]})}export{i as component};
