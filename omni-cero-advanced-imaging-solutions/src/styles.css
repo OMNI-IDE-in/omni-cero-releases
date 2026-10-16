@@ -75,8 +75,24 @@
 .mobile-menu-button { display:none; }
 .eyebrow { display:flex; align-items:center; gap:10px; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--primary); }
 .eyebrow-dot { width:6px; height:6px; background:var(--primary); border-radius:50%; }
-.hero { position:relative; height:530px; overflow:hidden; background:var(--muted); }
-.hero-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 54%; }
+.hero {
+  position: relative;
+  height: calc(100vh - 179px);
+  height: calc(100dvh - 179px);
+  min-height: 520px;
+  overflow: hidden;
+  background: var(--muted);
+}
+.hero-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: right center;
+}
 .hero::after { content:""; position:absolute; inset:0; background:var(--hero-wash); pointer-events:none; }
 .hero-content { position:relative; z-index:1; padding-top:48px; }
 .hero h1 { font-size:68px; line-height:1.10; font-weight:500; margin-top:18px; max-width:650px; }
@@ -164,7 +180,7 @@
 .about-grid p { font-size:15px; line-height:1.95; color:var(--muted-foreground); margin-top:18px; }
 .fade-in { animation:reveal .7s ease both; }
 @keyframes reveal { from {opacity:0;transform:translateY(15px)} to {opacity:1;transform:translateY(0)} }
-@media(min-width:1600px) { .hero { height:690px; } .hero-content { padding-top:110px; } }
+@media(min-width:1600px) { .hero-content { padding-top: clamp(60px, 8vh, 100px); } }
 @media(max-width:1100px) {
   .site-width { padding-inline: 32px; }
   .desktop-nav { gap:22px; }
@@ -210,13 +226,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      oklch(0.995 0.002 180 / 95%) 0%,
-      oklch(0.995 0.002 180 / 84%) 40%,
-      oklch(0.995 0.002 180 / 30%) 70%,
-      oklch(0.995 0.002 180 / 75%) 100%
-    );
+    background: oklch(0.995 0.002 180 / 5%);
     pointer-events: none;
     z-index: 1;
     display: block;
