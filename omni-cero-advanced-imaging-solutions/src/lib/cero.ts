@@ -3,8 +3,10 @@ import xvrImg from "@/assets/xvr.png";
 import workstationImg from "@/assets/workstation_ui.png";
 import drocImg from "@/assets/omni-cero-droc.png";
 import logoImg from "@/assets/logo.png";
+import spineProofImg from "@/assets/symphony-v3-spine-proof.png";
+import flfsStitchProofImg from "@/assets/flfs-panoramic-stitching-proof.png";
 
-export { logoImg, liveImg, xvrImg, workstationImg, drocImg };
+export { logoImg, liveImg, xvrImg, workstationImg, drocImg, spineProofImg, flfsStitchProofImg };
 
 export interface Detector {
   name: string;

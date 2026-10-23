@@ -21,7 +21,7 @@ import {
   Laptop,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { products, type CeroProduct, logoImg, liveImg, xvrImg, workstationImg } from "@/lib/cero";
+import { products, type CeroProduct, logoImg, liveImg, xvrImg, workstationImg, spineProofImg, flfsStitchProofImg } from "@/lib/cero";
 
 // Context for global Modals (Download picker & Video tour)
 interface ModalContextType {
@@ -509,6 +509,98 @@ export function ProductDetail({ product }: { product: CeroProduct }) {
               </div>
             ))}
           </div>
+
+          {/* 1-to-1 Diagnostic Image Quality Comparison Showcase for DROC */}
+          {product.id === "droc" && (
+            <div className="mt-16 space-y-12">
+              <div className="section-heading">
+                <div>
+                  <Eyebrow>1-to-1 Clinical Image Quality Benchmark</Eyebrow>
+                  <h2>Symphony™ v3.0 Multi-Scale Processing vs. Legacy DR</h2>
+                </div>
+                <p className="section-intro">
+                  See the side-by-side diagnostic proof. Bounded non-linear rational contrast enhancement
+                  completely eliminates step-edge metal halos while revealing fine bone trabeculae and soft tissue detail.
+                </p>
+              </div>
+
+              {/* Spine Metal Implant 1-to-1 Proof Board */}
+              <div className="rounded-xl border border-border bg-card overflow-hidden shadow-2xl">
+                <div className="bg-muted px-4 py-3 border-b border-border flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="size-2.5 rounded-full bg-primary" />
+                    <span className="text-xs font-mono font-bold text-foreground">
+                      IEC 62220-1 Quantitative Verification · Spine with High-Contrast Metal Implants
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-primary font-semibold bg-primary/10 px-2 py-0.5 rounded">
+                    0.02% Halo Overshoot · 99.9% Halo Elimination
+                  </span>
+                </div>
+                <div className="p-2 sm:p-4 bg-neutral-950 flex justify-center">
+                  <img
+                    src={spineProofImg}
+                    alt="Side-by-side comparison: Standard legacy DR vs Omni Cero Symphony v3.0 on Spine with Metal Implants"
+                    width="1380"
+                    height="960"
+                    loading="lazy"
+                    className="w-full h-auto max-w-5xl rounded object-contain border border-neutral-800"
+                  />
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 p-4 bg-secondary/30 border-t border-border text-center text-xs font-mono">
+                  <div>
+                    <span className="text-muted-foreground block text-[10px] uppercase">Step-Edge Halo</span>
+                    <strong className="text-foreground text-sm">35.2% &rarr; 0.02%</strong>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block text-[10px] uppercase">Quantum Noise (&sigma;)</span>
+                    <strong className="text-foreground text-sm">-72.3% Mottle</strong>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block text-[10px] uppercase">Contrast-to-Noise (CNR)</span>
+                    <strong className="text-primary text-sm">+78% CNR Boost</strong>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block text-[10px] uppercase">MTF @ 1.0 lp/mm</span>
+                    <strong className="text-foreground text-sm">+19% Sharpness</strong>
+                  </div>
+                </div>
+              </div>
+
+              {/* FLFS Full-Spine / Long-Leg Panoramic Stitching Proof Board */}
+              <div className="rounded-xl border border-border bg-card overflow-hidden shadow-2xl">
+                <div className="bg-muted px-4 py-3 border-b border-border flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="size-2.5 rounded-full bg-emerald-500" />
+                    <span className="text-xs font-mono font-bold text-foreground">
+                      Full-Spine &amp; Long-Leg (FLFS) Panoramic Auto-Stitching Engine
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-emerald-400 font-semibold bg-emerald-950/50 border border-emerald-800 px-2 py-0.5 rounded">
+                    Zero Visible Seam · Calibrated cm/mm Ruler
+                  </span>
+                </div>
+                <div className="p-2 sm:p-4 bg-neutral-950 flex justify-center">
+                  <img
+                    src={flfsStitchProofImg}
+                    alt="Full-Spine FLFS Panoramic Auto-Stitching 3-segment radiographic registration and multi-band blend"
+                    width="1380"
+                    height="960"
+                    loading="lazy"
+                    className="w-full h-auto max-w-5xl rounded object-contain border border-neutral-800"
+                  />
+                </div>
+                <div className="p-4 bg-secondary/30 border-t border-border flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span className="font-mono">
+                    Sub-pixel gradient registration · Inter-exposure mAs equalization · Multi-band Laplacian feathering
+                  </span>
+                  <span className="font-semibold text-foreground">
+                    Native Scoliosis Cobb &amp; Leg-Length Orthopedic Tools
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="mt-16 p-8 rounded-lg bg-secondary/50 border border-border">
             <h3 className="text-xl font-bold mb-6">Technical Specifications</h3>
