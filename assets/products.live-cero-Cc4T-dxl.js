@@ -1,1 +1,0 @@
-import{c as e}from"./useSelector-BcTnCC3_.js";import{a as t,s as n}from"./index-CHM0xIi7.js";var r=e();function i(){return(0,r.jsx)(t,{product:n[1]})}export{i as component};
