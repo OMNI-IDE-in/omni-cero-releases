@@ -372,6 +372,22 @@ export function SiteFooter() {
                     height={54}
                   />
                 </a>
+                <a
+                  href="https://launchkiwi.com/p/omni-cero"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Featured on LaunchKiwi"
+                  className="inline-flex items-center transition-all duration-200 hover:opacity-85 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <img
+                    src="https://launchkiwi.com/badge-light.svg"
+                    alt="Featured on LaunchKiwi"
+                    style={{ height: "26px", width: "auto" }}
+                    className="h-[26px] w-auto rounded object-contain shadow-xs"
+                    width={198}
+                    height={62}
+                  />
+                </a>
               </div>
             </div>
           </div>
