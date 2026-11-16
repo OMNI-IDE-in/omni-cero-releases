@@ -7,7 +7,7 @@ export const Route = createFileRoute("/products/live-cero")({
   head: () =>
     pageHead(
       "LIVE CERO — 30 FPS Live C-Arm Fluoroscopy Capture, Real-Time DSA & Vascular Roadmapping",
-      "Connect any surgical C-arm (Siemens, GE, Philips, Ziehm) to LIVE CERO for real-time 30 FPS live fluoroscopy capture, motion-corrected Digital Subtraction Angiography (DSA), vascular roadmapping, and sterile table-side tablet console. 100% offline Windows workstation by Omni IDE.",
+      "Connect any surgical C-arm (Siemens, GE, Philips, Ziehm) to LIVE CERO for real-time 30 FPS live fluoroscopy capture, motion-corrected Digital Subtraction Angiography (DSA), vascular roadmapping, and sterile table-side tablet console. 100% offline Windows workstation by BABELL GROUP.",
       "/products/live-cero",
       {
         "@context": "https://schema.org",
@@ -38,8 +38,8 @@ export const Route = createFileRoute("/products/live-cero")({
               "url": "https://cero.omniide.com/",
               "parentOrganization": {
                 "@type": "Organization",
-                "name": "Omni IDE",
-                "url": "https://omniide.com/",
+                "name": "BABELL GROUP",
+                "url": "https://babellgroup.com/",
               },
             },
             "description": "Real-time 30 FPS intraoperative fluoroscopy capture from surgical C-arms with real-time Digital Subtraction Angiography (DSA), vascular roadmapping, and sterile table-side tablet console. Works with Siemens Healthineers, GE Healthcare, Philips, and Ziehm Imaging systems via standard UVC video capture.",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/products/live-cero")({
             "name": "LIVE CERO Fluoroscopy & DSA Video Station",
             "manufacturer": {
               "@type": "Organization",
-              "name": "Omni Cero by Omni IDE",
+              "name": "Omni Cero by BABELL GROUP",
             },
             "description": "Intraoperative C-arm video capture and digital subtraction angiography workstation interfacing hospital C-arms with surgical displays.",
           },

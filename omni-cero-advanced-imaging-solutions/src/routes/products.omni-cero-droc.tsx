@@ -38,8 +38,8 @@ export const Route = createFileRoute("/products/omni-cero-droc")({
               "url": "https://cero.omniide.com/",
               "parentOrganization": {
                 "@type": "Organization",
-                "name": "Omni IDE",
-                "url": "https://omniide.com/",
+                "name": "BABELL GROUP",
+                "url": "https://babellgroup.com/",
               },
             },
             "description": "India's first multi-brand Digital Radiography Acquisition (DROC) software compatible with 11 global flat-panel detector manufacturers: Varex Imaging, iRay Technology, Vieworks, DRTECH, Rayence, CareRay, Teledyne DALSA, Canon Medical, Carestream, Thales Group, and PIXXGEN Corporation (+ OmniRef Lab 1024 QA simulator). Features integrated high-frequency X-ray generator control (CPI, Sedecal, Gulmay, Poskom), DICOM dry laser print management SCU (Fuji, Carestream, Agfa, Sony), sub-second AED preview, and 100% offline node-locked licensing.",
@@ -65,7 +65,7 @@ export const Route = createFileRoute("/products/omni-cero-droc")({
             "name": "OMNI CERO DROC Flat-Panel Acquisition Workstation",
             "manufacturer": {
               "@type": "Organization",
-              "name": "Omni Cero by Omni IDE",
+              "name": "Omni Cero by BABELL GROUP",
             },
             "description": "Clinical workstation software interfacing hospital flat-panel digital radiography detectors, X-ray generators, and laser film imagers with institutional PACS and DICOM archives.",
           },

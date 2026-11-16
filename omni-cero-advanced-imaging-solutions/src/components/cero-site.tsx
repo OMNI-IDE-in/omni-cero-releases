@@ -89,7 +89,7 @@ export function Brand() {
         <div className="brand-name">
           Omni Cero<span className="text-primary">.</span>
         </div>
-        <div className="brand-signature">BY OMNI IDE</div>
+        <div className="brand-signature">BY BABELL GROUP</div>
       </div>
     </Link>
   );
@@ -156,6 +156,9 @@ export function SiteHeader() {
           >
             Compatibility
           </Link>
+          <Link to="/research" className="nav-link" data-active={pathname === "/research"}>
+            Research
+          </Link>
           <Link to="/about" className="nav-link" data-active={pathname === "/about"}>
             About Cero
           </Link>
@@ -209,6 +212,9 @@ export function SiteHeader() {
           <div className="border-t my-2 border-border" />
           <Link to="/compatibility" onClick={() => setMobile(false)} className="px-4 py-2 block">
             Compatibility Matrix
+          </Link>
+          <Link to="/research" onClick={() => setMobile(false)} className="px-4 py-2 block">
+            Research Lab (V7)
           </Link>
           <Link to="/about" onClick={() => setMobile(false)} className="px-4 py-2 block">
             About Cero
@@ -407,6 +413,7 @@ export function SiteFooter() {
           </div>
           <div className="footer-col">
             <h3>DISCOVER</h3>
+            <Link to="/research">Omni Research Lab (V7)</Link>
             <Link to="/compatibility">Hardware Compatibility</Link>
             <Link to="/about">About Omni Cero</Link>
             <Link to="/contact">Contact & Licensing</Link>
@@ -422,8 +429,8 @@ export function SiteFooter() {
             <a href="tel:+919845325913">
               +91 98453 25913 <ArrowUpRight className="inline size-3" />
             </a>
-            <a href="https://omniide.com" target="_blank" rel="noreferrer">
-              Omni IDE Company <ArrowUpRight className="inline size-3" />
+            <a href="https://babellgroup.com" target="_blank" rel="noreferrer">
+              BABELL GROUP <ArrowUpRight className="inline size-3" />
             </a>
             <p className="text-xs text-muted-foreground mt-2">
               B-Block, Devgere, Kumbalagodu, Kengeri
@@ -434,7 +441,13 @@ export function SiteFooter() {
         </div>
         <div className="footer-bottom">
           <span>&copy; {new Date().getFullYear()} Omni Cero Medical Systems. All rights reserved.</span>
-          <span>A product of Omni IDE — omniide.com</span>
+          <span>
+            A{" "}
+            <a href="https://babellgroup.com" target="_blank" rel="noreferrer" className="underline hover:text-foreground">
+              BABELL GROUP
+            </a>{" "}
+            company &mdash; babellgroup.com
+          </span>
         </div>
       </div>
     </footer>
@@ -793,7 +806,7 @@ function DownloadModal({
               </>
             )}
           </button>
-          <span>Published by Omni IDE · Ed25519 node-locked</span>
+          <span>Published by BABELL GROUP &middot; Ed25519 node-locked</span>
         </div>
       </div>
     </div>

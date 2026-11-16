@@ -7,7 +7,7 @@ export const Route = createFileRoute("/products/xvr")({
   head: () =>
     pageHead(
       "CERO XVR — 3D Surgical Navigation Workstation (X-Ray Volume Registration)",
-      "Tracker-free 3D surgical navigation using neural 2D/3D X-ray Volume Registration. Fuses live C-arm fluoroscopy with preoperative CT/MRI volumes for sub-millimeter target accuracy (<0.8 mm MTRE, <18 ms latency) without optical tracking cameras. 100% offline Windows workstation by Omni IDE.",
+      "Tracker-free 3D surgical navigation using neural 2D/3D X-ray Volume Registration. Fuses live C-arm fluoroscopy with preoperative CT/MRI volumes for sub-millimeter target accuracy (<0.8 mm MTRE, <18 ms latency) without optical tracking cameras. 100% offline Windows workstation by BABELL GROUP.",
       "/products/xvr",
       {
         "@context": "https://schema.org",
@@ -38,8 +38,8 @@ export const Route = createFileRoute("/products/xvr")({
               "url": "https://cero.omniide.com/",
               "parentOrganization": {
                 "@type": "Organization",
-                "name": "Omni IDE",
-                "url": "https://omniide.com/",
+                "name": "BABELL GROUP",
+                "url": "https://babellgroup.com/",
               },
             },
             "description": "Tracker-free 3D surgical navigation utilizing neural 2D/3D registration aligning live fluoroscopy projections with preoperative 3D CT/MRI scans for sub-millimeter anatomical guidance (<0.8 mm MTRE) and <18 ms pose inference.",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/products/xvr")({
             "name": "CERO XVR Surgical Guidance Workstation",
             "manufacturer": {
               "@type": "Organization",
-              "name": "Omni Cero by Omni IDE",
+              "name": "Omni Cero by BABELL GROUP",
             },
             "description": "Intraoperative 3D surgical navigation and anatomical volume registration system for orthopedic, spine, and trauma procedures.",
           },

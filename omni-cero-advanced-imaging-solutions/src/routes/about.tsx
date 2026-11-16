@@ -9,8 +9,8 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () =>
     pageHead(
-      "About Omni Cero & Omni IDE — Indian Medical Imaging Innovation for Worldwide Hospitals",
-      "Omni Cero by Omni IDE is an Indian medical technology pioneer based in Bengaluru, engineering India's first multi-brand DROC acquisition software, 30 FPS C-arm fluoroscopy capture, and 3D XVR surgical navigation. 100% offline Windows workstations.",
+      "About Omni Cero & BABELL GROUP — Indian Medical Imaging Innovation for Worldwide Hospitals",
+      "Omni Cero by BABELL GROUP is an Indian medical technology pioneer based in Bengaluru, engineering India's first multi-brand DROC acquisition software, 30 FPS C-arm fluoroscopy capture, and 3D XVR surgical navigation. 100% offline Windows workstations.",
       "/about",
       {
         "@context": "https://schema.org",
@@ -29,8 +29,8 @@ export const Route = createFileRoute("/about")({
               "name": "Omni Cero",
               "parentOrganization": {
                 "@type": "Organization",
-                "name": "Omni IDE",
-                "url": "https://omniide.com/",
+                "name": "BABELL GROUP",
+                "url": "https://babellgroup.com/",
               },
               "address": {
                 "@type": "PostalAddress",
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/about")({
           },
         ],
       },
-      "About Omni Cero, Omni IDE, Indian medical imaging innovation, India first DROC company, Bengaluru medical software, offline DICOM workstation, intraoperative surgical software India"
+      "About Omni Cero, BABELL GROUP, Indian medical imaging innovation, India first DROC company, Bengaluru medical software, offline DICOM workstation, intraoperative surgical software India"
     ),
 });
 
@@ -53,7 +53,7 @@ function About() {
     <>
       <section className="page-intro">
         <div className="site-width">
-          <Eyebrow>Omni Cero by Omni IDE</Eyebrow>
+          <Eyebrow>Omni Cero by BABELL GROUP</Eyebrow>
           <h1>
             Indian Ingenuity.
             <br />
@@ -101,8 +101,12 @@ function About() {
                 the room.
               </p>
               <p>
-                Engineered in Bengaluru, India by Omni IDE, our platform is designed for orthopedic, spine, and
-                vascular surgeons who demand sub-millimeter precision from standard clinical hardware.
+                Engineered in Bengaluru, India under{" "}
+                <a href="https://babellgroup.com/" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline">
+                  BABELL GROUP
+                </a>
+                , our platform is designed for orthopedic, spine, and vascular surgeons who demand
+                sub-millimeter precision from standard clinical hardware.
               </p>
             </div>
           </div>

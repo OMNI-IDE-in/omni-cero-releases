@@ -11,8 +11,8 @@ export const Route = createFileRoute("/contact")({
     typeof s["product"] === "string" ? { product: s["product"] } : {},
   head: () =>
     pageHead(
-      "Contact Omni Cero — Book Clinical Demo & Workstation Licensing | Omni IDE",
-      "Speak with Omni Cero by Omni IDE about in-hospital demonstrations, flat-panel detector integration, live C-arm trials, or node-locked workstation licensing. Located in Bengaluru, India.",
+      "Contact Omni Cero — Book Clinical Demo & Workstation Licensing | BABELL GROUP",
+      "Speak with Omni Cero by BABELL GROUP about in-hospital demonstrations, flat-panel detector integration, live C-arm trials, or node-locked workstation licensing. Located in Bengaluru, India.",
       "/contact",
       {
         "@context": "https://schema.org",
@@ -199,6 +199,9 @@ function Contact() {
                       {p.name} ({p.category})
                     </option>
                   ))}
+                  <option value="Omni Research Lab V7 Dataset">
+                    Omni Research Lab V7 — Full 36-Case Dataset &amp; Evaluation
+                  </option>
                   <option value="Complete Omni Cero Suite">Complete Omni Cero Workstation Suite</option>
                   <option value="General Licensing & Hardware Compatibility">
                     General Licensing &amp; Hardware Compatibility

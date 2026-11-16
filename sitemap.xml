@@ -67,6 +67,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://cero.omniide.com/research</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://cero.omniide.com/about</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>

@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
   head: () =>
     pageHead(
       "Omni Cero — India's First DROC, Live C-Arm Fluoroscopy & 3D Surgical Navigation",
-      "India's first multi-brand DROC acquisition software, 30 FPS C-arm fluoroscopy capture with DSA, and tracker-free 3D XVR surgical navigation. 100% offline Windows workstation by Omni IDE.",
+      "India's first multi-brand DROC acquisition software, 30 FPS C-arm fluoroscopy capture with DSA, and tracker-free 3D XVR surgical navigation. 100% offline Windows workstation by BABELL GROUP.",
       "/",
       {
         "@context": "https://schema.org",
@@ -44,8 +44,8 @@ export const Route = createFileRoute("/")({
             },
             "parentOrganization": {
               "@type": "Organization",
-              "name": "Omni IDE",
-              "url": "https://omniide.com/"
+              "name": "BABELL GROUP",
+              "url": "https://babellgroup.com/"
             },
             "address": {
               "@type": "PostalAddress",
@@ -149,7 +149,7 @@ export const Route = createFileRoute("/")({
                 "name": "What is Omni Cero?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Omni Cero is an offline Windows medical workstation developed by Omni IDE in Bengaluru. It brings together flat-panel digital radiography (OMNI CERO DROC), 30 FPS C-arm fluoroscopy capture with real-time DSA (LIVE CERO), and neural 2D/3D surgical navigation (CERO XVR)."
+                  "text": "Omni Cero is an offline Windows medical workstation developed under BABELL GROUP in Bengaluru. It brings together flat-panel digital radiography (OMNI CERO DROC), 30 FPS C-arm fluoroscopy capture with real-time DSA (LIVE CERO), and neural 2D/3D surgical navigation (CERO XVR)."
                 }
               },
               {
@@ -545,7 +545,7 @@ function Home() {
             {[
               {
                 q: "What is Omni Cero?",
-                a: "Omni Cero is an offline Windows medical workstation developed by Omni IDE in Bengaluru. It brings together flat-panel digital radiography (OMNI CERO DROC), 30 FPS C-arm fluoroscopy capture with real-time DSA and vascular roadmapping (LIVE CERO), and neural 2D/3D registration for tracker-free surgical navigation (CERO XVR). All computation occurs locally on the machine in the room.",
+                a: "Omni Cero is an offline Windows medical workstation developed under BABELL GROUP in Bengaluru. It brings together flat-panel digital radiography (OMNI CERO DROC), 30 FPS C-arm fluoroscopy capture with real-time DSA and vascular roadmapping (LIVE CERO), and neural 2D/3D registration for tracker-free surgical navigation (CERO XVR). All computation occurs locally on the machine in the room.",
               },
               {
                 q: "What does XVR mean?",

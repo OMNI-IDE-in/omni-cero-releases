@@ -7,7 +7,7 @@ export const Route = createFileRoute("/products/")({
   head: () =>
     pageHead(
       "Medical Imaging Software Suite — DROC, Live C-Arm & 3D Navigation",
-      "Explore the Omni Cero workstation suite: OMNI CERO DROC (India's first multi-brand DROC software), LIVE CERO (30 FPS live fluoroscopy with DSA), and CERO XVR (3D tracker-free navigation). 100% offline Windows workstations by Omni IDE.",
+      "Explore the Omni Cero workstation suite: OMNI CERO DROC (India's first multi-brand DROC software), LIVE CERO (30 FPS live fluoroscopy with DSA), and CERO XVR (3D tracker-free navigation). 100% offline Windows workstations by BABELL GROUP.",
       "/products",
       {
         "@context": "https://schema.org",
