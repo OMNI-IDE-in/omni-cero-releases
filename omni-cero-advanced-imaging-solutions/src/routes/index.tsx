@@ -39,8 +39,8 @@ export const Route = createFileRoute("/")({
             "logo": {
               "@type": "ImageObject",
               "url": "https://cero.omniide.com/assets/logo.png",
-              "width": 1010,
-              "height": 790
+              "width": 1024,
+              "height": 1024
             },
             "parentOrganization": {
               "@type": "Organization",
