@@ -19,6 +19,9 @@ import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsLiveCeroRouteImport } from './routes/products.live-cero'
 import { Route as ProductsOmniCeroDrocRouteImport } from './routes/products.omni-cero-droc'
 import { Route as ProductsXvrRouteImport } from './routes/products.xvr'
+import { Route as ResearchIndexRouteImport } from './routes/research.index'
+import { Route as ResearchOmnicbctRouteImport } from './routes/research.omnicbct'
+import { Route as ResearchV7RouteImport } from './routes/research.v7'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -70,6 +73,21 @@ const ProductsXvrRoute = ProductsXvrRouteImport.update({
   path: '/xvr',
   getParentRoute: () => ProductsRoute,
 } as any)
+const ResearchIndexRoute = ResearchIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ResearchRoute,
+} as any)
+const ResearchOmnicbctRoute = ResearchOmnicbctRouteImport.update({
+  id: '/omnicbct',
+  path: '/omnicbct',
+  getParentRoute: () => ResearchRoute,
+} as any)
+const ResearchV7Route = ResearchV7RouteImport.update({
+  id: '/v7',
+  path: '/v7',
+  getParentRoute: () => ResearchRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -77,22 +95,27 @@ export interface FileRoutesByFullPath {
   '/compatibility': typeof CompatibilityRoute
   '/contact': typeof ContactRoute
   '/products': typeof ProductsRouteWithChildren
-  '/research': typeof ResearchRoute
+  '/research': typeof ResearchRouteWithChildren
   '/products/live-cero': typeof ProductsLiveCeroRoute
   '/products/omni-cero-droc': typeof ProductsOmniCeroDrocRoute
   '/products/xvr': typeof ProductsXvrRoute
+  '/research/omnicbct': typeof ResearchOmnicbctRoute
+  '/research/v7': typeof ResearchV7Route
   '/products/': typeof ProductsIndexRoute
+  '/research/': typeof ResearchIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/compatibility': typeof CompatibilityRoute
   '/contact': typeof ContactRoute
-  '/research': typeof ResearchRoute
   '/products/live-cero': typeof ProductsLiveCeroRoute
   '/products/omni-cero-droc': typeof ProductsOmniCeroDrocRoute
   '/products/xvr': typeof ProductsXvrRoute
+  '/research/omnicbct': typeof ResearchOmnicbctRoute
+  '/research/v7': typeof ResearchV7Route
   '/products': typeof ProductsIndexRoute
+  '/research': typeof ResearchIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -101,11 +124,14 @@ export interface FileRoutesById {
   '/compatibility': typeof CompatibilityRoute
   '/contact': typeof ContactRoute
   '/products': typeof ProductsRouteWithChildren
-  '/research': typeof ResearchRoute
+  '/research': typeof ResearchRouteWithChildren
   '/products/live-cero': typeof ProductsLiveCeroRoute
   '/products/omni-cero-droc': typeof ProductsOmniCeroDrocRoute
   '/products/xvr': typeof ProductsXvrRoute
+  '/research/omnicbct': typeof ResearchOmnicbctRoute
+  '/research/v7': typeof ResearchV7Route
   '/products/': typeof ProductsIndexRoute
+  '/research/': typeof ResearchIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -119,18 +145,23 @@ export interface FileRouteTypes {
     | '/products/live-cero'
     | '/products/omni-cero-droc'
     | '/products/xvr'
+    | '/research/omnicbct'
+    | '/research/v7'
     | '/products/'
+    | '/research/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/compatibility'
     | '/contact'
-    | '/research'
     | '/products/live-cero'
     | '/products/omni-cero-droc'
     | '/products/xvr'
+    | '/research/omnicbct'
+    | '/research/v7'
     | '/products'
+    | '/research'
   id:
     | '__root__'
     | '/'
@@ -142,7 +173,10 @@ export interface FileRouteTypes {
     | '/products/live-cero'
     | '/products/omni-cero-droc'
     | '/products/xvr'
+    | '/research/omnicbct'
+    | '/research/v7'
     | '/products/'
+    | '/research/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -151,7 +185,7 @@ export interface RootRouteChildren {
   CompatibilityRoute: typeof CompatibilityRoute
   ContactRoute: typeof ContactRoute
   ProductsRoute: typeof ProductsRouteWithChildren
-  ResearchRoute: typeof ResearchRoute
+  ResearchRoute: typeof ResearchRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -226,6 +260,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsXvrRouteImport
       parentRoute: typeof ProductsRoute
     }
+    '/research/': {
+      id: '/research/'
+      path: '/'
+      fullPath: '/research/'
+      preLoaderRoute: typeof ResearchIndexRouteImport
+      parentRoute: typeof ResearchRoute
+    }
+    '/research/omnicbct': {
+      id: '/research/omnicbct'
+      path: '/omnicbct'
+      fullPath: '/research/omnicbct'
+      preLoaderRoute: typeof ResearchOmnicbctRouteImport
+      parentRoute: typeof ResearchRoute
+    }
+    '/research/v7': {
+      id: '/research/v7'
+      path: '/v7'
+      fullPath: '/research/v7'
+      preLoaderRoute: typeof ResearchV7RouteImport
+      parentRoute: typeof ResearchRoute
+    }
   }
 }
 
@@ -247,13 +302,29 @@ const ProductsRouteWithChildren = ProductsRoute._addFileChildren(
   ProductsRouteChildren,
 )
 
+interface ResearchRouteChildren {
+  ResearchOmnicbctRoute: typeof ResearchOmnicbctRoute
+  ResearchV7Route: typeof ResearchV7Route
+  ResearchIndexRoute: typeof ResearchIndexRoute
+}
+
+const ResearchRouteChildren: ResearchRouteChildren = {
+  ResearchOmnicbctRoute: ResearchOmnicbctRoute,
+  ResearchV7Route: ResearchV7Route,
+  ResearchIndexRoute: ResearchIndexRoute,
+}
+
+const ResearchRouteWithChildren = ResearchRoute._addFileChildren(
+  ResearchRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CompatibilityRoute: CompatibilityRoute,
   ContactRoute: ContactRoute,
   ProductsRoute: ProductsRouteWithChildren,
-  ResearchRoute: ResearchRoute,
+  ResearchRoute: ResearchRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

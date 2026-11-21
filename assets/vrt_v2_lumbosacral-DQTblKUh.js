@@ -1,0 +1,1 @@
+var e=`/assets/vrt_v2_lumbosacral-DPB-sHGG.png`;export{e as t};

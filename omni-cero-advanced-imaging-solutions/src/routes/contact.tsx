@@ -202,6 +202,9 @@ function Contact() {
                   <option value="Omni Research Lab V7 Dataset">
                     Omni Research Lab V7 — Full 36-Case Dataset &amp; Evaluation
                   </option>
+                  <option value="OmniCBCT 3D Engine Evaluation">
+                    OmniCBCT 3D Engine — 48-Hour Blind OEM &amp; Clinical Evaluation
+                  </option>
                   <option value="Complete Omni Cero Suite">Complete Omni Cero Workstation Suite</option>
                   <option value="General Licensing & Hardware Compatibility">
                     General Licensing &amp; Hardware Compatibility

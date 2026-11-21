@@ -1,0 +1,1 @@
+var e=`/assets/hold36-mono-C3KaY4kW.jpg`;export{e as t};

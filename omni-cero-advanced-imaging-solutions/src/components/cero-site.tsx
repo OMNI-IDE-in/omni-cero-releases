@@ -156,7 +156,7 @@ export function SiteHeader() {
           >
             Compatibility
           </Link>
-          <Link to="/research" className="nav-link" data-active={pathname === "/research"}>
+          <Link to="/research" className="nav-link" data-active={pathname.startsWith("/research")}>
             Research
           </Link>
           <Link to="/about" className="nav-link" data-active={pathname === "/about"}>
@@ -214,7 +214,7 @@ export function SiteHeader() {
             Compatibility Matrix
           </Link>
           <Link to="/research" onClick={() => setMobile(false)} className="px-4 py-2 block">
-            Research Lab (V7)
+            Omni Research Lab
           </Link>
           <Link to="/about" onClick={() => setMobile(false)} className="px-4 py-2 block">
             About Cero
@@ -413,7 +413,9 @@ export function SiteFooter() {
           </div>
           <div className="footer-col">
             <h3>DISCOVER</h3>
-            <Link to="/research">Omni Research Lab (V7)</Link>
+            <Link to="/research">Omni Research Lab</Link>
+            <Link to="/research/v7">ClearView &amp; TrueTissue V7</Link>
+            <Link to="/research/omnicbct">OmniCBCT 3D Engine</Link>
             <Link to="/compatibility">Hardware Compatibility</Link>
             <Link to="/about">About Omni Cero</Link>
             <Link to="/contact">Contact & Licensing</Link>
