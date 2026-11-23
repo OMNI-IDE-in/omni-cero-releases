@@ -16,6 +16,7 @@ import { buildBreadcrumbSchema, pageHead } from "@/lib/cero";
 
 import hold36Mono from "@/assets/research/hold36-mono.jpg";
 import vrtLumbosacral from "@/assets/research/vrt_v2_lumbosacral.png";
+import siemensAxialImg from "@/assets/research/omnispine-siemens-axial.png";
 
 export const Route = createFileRoute("/research/")({
   component: ResearchHub,
@@ -76,18 +77,18 @@ function ResearchHub() {
             <div>
               <Eyebrow>Research Programs</Eyebrow>
               <h2>
-                Two Breakthrough Engines.
+                Three Breakthrough Engines.
                 <br />
                 Measurable Clinical Proof.
               </h2>
             </div>
             <p className="section-intro">
-              Select a research program below to inspect interactive clinical comparisons, 3D
-              cinematic reconstructions, and verified benchmark scorecards.
+              Select a research program below to inspect interactive clinical comparisons, true
+              Axial CT proofs, 3D cinematic reconstructions, and verified scorecards.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Program 01: ClearView & TrueTissue V7 */}
             <div className="rounded-xl border border-border bg-card overflow-hidden flex flex-col justify-between shadow-xs transition-all hover:shadow-md">
               <div>
@@ -200,6 +201,64 @@ function ResearchHub() {
                 </Link>
                 <Button variant="brand" size="sm" asChild>
                   <Link to="/research/omnicbct">Explore OmniCBCT 3D</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Program 03: OmniSpine Axial Engine */}
+            <div className="rounded-xl border border-border bg-card overflow-hidden flex flex-col justify-between shadow-xs transition-all hover:shadow-md">
+              <div>
+                <div className="relative h-60 sm:h-64 bg-black overflow-hidden border-b border-border">
+                  <img
+                    src={siemensAxialImg}
+                    alt="OmniSpine Axial Engine Real Hospital C-Arm Axial Vertebra"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-background/90 text-foreground text-[10px] font-bold uppercase tracking-wider border border-border">
+                    03 / CT-Free Axial Spine
+                  </span>
+                </div>
+
+                <div className="p-6 sm:p-8">
+                  <div className="text-xs font-bold uppercase tracking-wider text-primary">
+                    2D C-Arm X-Rays &rarr; True Axial CT &middot; Zero Pre-Op CT
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mt-2">
+                    OmniSpine&trade; Axial Engine
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+                    Converts standard rotating 2D mobile C-arm X-rays into crisp Axial spine slices
+                    and 16-bit CT DICOM series &mdash; validated on real hospital Siemens &amp;
+                    100 kV bone scans.
+                  </p>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-6 pt-5 border-t border-border">
+                    <div>
+                      <div className="text-lg font-extrabold text-primary">0.68 mm</div>
+                      <div className="text-[11px] text-muted-foreground">Axial Resolution</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-extrabold text-primary">4.4&times;</div>
+                      <div className="text-[11px] text-muted-foreground">0.897 SSIM Gain</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-extrabold text-primary">120&deg;&ndash;216&deg;</div>
+                      <div className="text-[11px] text-muted-foreground">Arc Support</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="px-6 sm:px-8 py-4 bg-background border-t border-border flex flex-wrap items-center justify-between gap-3">
+                <Link
+                  to="/research/omnispine"
+                  className="text-xs font-bold text-primary hover:underline flex items-center gap-1.5"
+                >
+                  Inspect Real-Machine Axial Proofs <ArrowRight className="size-3.5" />
+                </Link>
+                <Button variant="brand" size="sm" asChild>
+                  <Link to="/research/omnispine">Explore OmniSpine</Link>
                 </Button>
               </div>
             </div>

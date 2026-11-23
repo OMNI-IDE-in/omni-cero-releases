@@ -416,6 +416,7 @@ export function SiteFooter() {
             <Link to="/research">Omni Research Lab</Link>
             <Link to="/research/v7">ClearView &amp; TrueTissue V7</Link>
             <Link to="/research/omnicbct">OmniCBCT 3D Engine</Link>
+            <Link to="/research/omnispine">OmniSpine&trade; Axial Engine</Link>
             <Link to="/compatibility">Hardware Compatibility</Link>
             <Link to="/about">About Omni Cero</Link>
             <Link to="/contact">Contact & Licensing</Link>

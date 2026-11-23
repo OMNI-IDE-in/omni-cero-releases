@@ -21,6 +21,7 @@ import { Route as ProductsOmniCeroDrocRouteImport } from './routes/products.omni
 import { Route as ProductsXvrRouteImport } from './routes/products.xvr'
 import { Route as ResearchIndexRouteImport } from './routes/research.index'
 import { Route as ResearchOmnicbctRouteImport } from './routes/research.omnicbct'
+import { Route as ResearchOmnispineRouteImport } from './routes/research.omnispine'
 import { Route as ResearchV7RouteImport } from './routes/research.v7'
 
 const IndexRoute = IndexRouteImport.update({
@@ -83,6 +84,11 @@ const ResearchOmnicbctRoute = ResearchOmnicbctRouteImport.update({
   path: '/omnicbct',
   getParentRoute: () => ResearchRoute,
 } as any)
+const ResearchOmnispineRoute = ResearchOmnispineRouteImport.update({
+  id: '/omnispine',
+  path: '/omnispine',
+  getParentRoute: () => ResearchRoute,
+} as any)
 const ResearchV7Route = ResearchV7RouteImport.update({
   id: '/v7',
   path: '/v7',
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/products/omni-cero-droc': typeof ProductsOmniCeroDrocRoute
   '/products/xvr': typeof ProductsXvrRoute
   '/research/omnicbct': typeof ResearchOmnicbctRoute
+  '/research/omnispine': typeof ResearchOmnispineRoute
   '/research/v7': typeof ResearchV7Route
   '/products/': typeof ProductsIndexRoute
   '/research/': typeof ResearchIndexRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByTo {
   '/products/omni-cero-droc': typeof ProductsOmniCeroDrocRoute
   '/products/xvr': typeof ProductsXvrRoute
   '/research/omnicbct': typeof ResearchOmnicbctRoute
+  '/research/omnispine': typeof ResearchOmnispineRoute
   '/research/v7': typeof ResearchV7Route
   '/products': typeof ProductsIndexRoute
   '/research': typeof ResearchIndexRoute
@@ -129,6 +137,7 @@ export interface FileRoutesById {
   '/products/omni-cero-droc': typeof ProductsOmniCeroDrocRoute
   '/products/xvr': typeof ProductsXvrRoute
   '/research/omnicbct': typeof ResearchOmnicbctRoute
+  '/research/omnispine': typeof ResearchOmnispineRoute
   '/research/v7': typeof ResearchV7Route
   '/products/': typeof ProductsIndexRoute
   '/research/': typeof ResearchIndexRoute
@@ -146,6 +155,7 @@ export interface FileRouteTypes {
     | '/products/omni-cero-droc'
     | '/products/xvr'
     | '/research/omnicbct'
+    | '/research/omnispine'
     | '/research/v7'
     | '/products/'
     | '/research/'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/products/omni-cero-droc'
     | '/products/xvr'
     | '/research/omnicbct'
+    | '/research/omnispine'
     | '/research/v7'
     | '/products'
     | '/research'
@@ -174,6 +185,7 @@ export interface FileRouteTypes {
     | '/products/omni-cero-droc'
     | '/products/xvr'
     | '/research/omnicbct'
+    | '/research/omnispine'
     | '/research/v7'
     | '/products/'
     | '/research/'
@@ -274,6 +286,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResearchOmnicbctRouteImport
       parentRoute: typeof ResearchRoute
     }
+    '/research/omnispine': {
+      id: '/research/omnispine'
+      path: '/omnispine'
+      fullPath: '/research/omnispine'
+      preLoaderRoute: typeof ResearchOmnispineRouteImport
+      parentRoute: typeof ResearchRoute
+    }
     '/research/v7': {
       id: '/research/v7'
       path: '/v7'
@@ -304,12 +323,14 @@ const ProductsRouteWithChildren = ProductsRoute._addFileChildren(
 
 interface ResearchRouteChildren {
   ResearchOmnicbctRoute: typeof ResearchOmnicbctRoute
+  ResearchOmnispineRoute: typeof ResearchOmnispineRoute
   ResearchV7Route: typeof ResearchV7Route
   ResearchIndexRoute: typeof ResearchIndexRoute
 }
 
 const ResearchRouteChildren: ResearchRouteChildren = {
   ResearchOmnicbctRoute: ResearchOmnicbctRoute,
+  ResearchOmnispineRoute: ResearchOmnispineRoute,
   ResearchV7Route: ResearchV7Route,
   ResearchIndexRoute: ResearchIndexRoute,
 }

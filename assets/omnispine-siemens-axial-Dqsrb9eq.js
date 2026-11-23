@@ -1,0 +1,1 @@
+var e=`/assets/omnispine-siemens-axial-C9M3MxKg.png`;export{e as t};
