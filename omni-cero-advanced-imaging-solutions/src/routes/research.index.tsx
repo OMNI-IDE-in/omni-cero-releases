@@ -16,7 +16,7 @@ import { buildBreadcrumbSchema, pageHead } from "@/lib/cero";
 
 import hold36Mono from "@/assets/research/hold36-mono.jpg";
 import vrtLumbosacral from "@/assets/research/vrt_v2_lumbosacral.png";
-import siemensAxialImg from "@/assets/research/omnispine-siemens-axial.png";
+import lumbar512Img from "@/assets/research/omnispine-gpu-lumbar-512.png";
 
 export const Route = createFileRoute("/research/")({
   component: ResearchHub,
@@ -208,10 +208,10 @@ function ResearchHub() {
             {/* Program 03: OmniSpine Axial Engine */}
             <div className="rounded-xl border border-border bg-card overflow-hidden flex flex-col justify-between shadow-xs transition-all hover:shadow-md">
               <div>
-                <div className="relative h-60 sm:h-64 bg-black overflow-hidden border-b border-border">
+                <div className="relative h-60 sm:h-64 bg-[#0d1829] overflow-hidden border-b border-border">
                   <img
-                    src={siemensAxialImg}
-                    alt="OmniSpine Axial Engine Real Hospital C-Arm Axial Vertebra"
+                    src={lumbar512Img}
+                    alt="OmniSpine GPU 512x512x320 Lumbar Spine 3D Reconstruction"
                     className="w-full h-full object-contain"
                     loading="lazy"
                   />

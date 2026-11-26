@@ -1,0 +1,1 @@
+var e=`/assets/xvr-C5c18pAV.png`;export{e as t};

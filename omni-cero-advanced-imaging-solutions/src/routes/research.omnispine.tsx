@@ -11,10 +11,10 @@ import { Button } from "@/components/ui/button";
 import { CtaBand, Eyebrow } from "@/components/cero-site";
 import { buildBreadcrumbSchema, pageHead } from "@/lib/cero";
 
-import siemensAxialImg from "@/assets/research/omnispine-siemens-axial.png";
-import planmecaAxialImg from "@/assets/research/omnispine-planmeca-axial.png";
-import lumbar198AxialImg from "@/assets/research/omnispine-lumbar-198-axial.png";
-import planmeca3dVrtImg from "@/assets/research/omnispine-planmeca-3d-vrt.png";
+import lumbar512Img from "@/assets/research/omnispine-gpu-lumbar-512.png";
+import lumbarScrewsImg from "@/assets/research/omnispine-gpu-lumbar-screws.png";
+import knee512Img from "@/assets/research/omnispine-gpu-knee-512.png";
+import kneeIvoryImg from "@/assets/research/omnispine-gpu-knee-ivory.png";
 
 interface AxialProof {
   id: string;
@@ -28,44 +28,44 @@ interface AxialProof {
 
 const AXIAL_PROOFS: AxialProof[] = [
   {
-    id: "siemens-carm",
-    badge: "Real Hospital C-Arm · 01",
-    source: "Siemens Axiom Artis dFA (73 kVp · 216.5°)",
-    title: "Real Hospital C-Arm → Axial Vertebra",
-    metrics: "272 Raw 2D XA Shots · 19.3 s CPU (<1 s GPU) · 119,621 Starved Pixels Healed",
+    id: "lumbar-512",
+    badge: "Lumbar Spine 3D · 01",
+    source: "Motorized C-Arm Lumbar L1–L5 (198° Sweep)",
+    title: "512³ Lumbar Spine Cinematic 3D",
+    metrics: "512×512×320 Volume in 0.64 s · 106.8–134.3 FPS Interactive 3D · 0.897 SSIM",
     summary:
-      "Direct reconstruction from actual hospital 2D XA cine-loop shots with zero preoperative CT. Resolves the vertebral body, bilateral pedicles, circular spinal canal, and ribs while healing edge-on table-rail streaks.",
-    image: siemensAxialImg,
+      "Full 512×512×320 lumbar spine reconstruction from 2D motorized C-arm X-rays with zero preoperative CT. Delivers photorealistic cortical bone and soft-tissue separation at over 120 FPS.",
+    image: lumbar512Img,
   },
   {
-    id: "planmeca-bone",
-    badge: "Real 100 kV Physical Bone · 02",
-    source: "100 kV / 80 mAs Clinical X-Ray Unit (210°)",
-    title: "Sub-Millimeter (0.68 mm) Cortical & Trabecular Bone",
-    metrics: "0.68 mm Axial Resolution · 16.2 s CPU · Zero Double-Edge Blurring",
+    id: "lumbar-screws",
+    badge: "Spine Pedicle Guidance · 02",
+    source: "Lumbar L1–L5 Pedicle Screw Visualization",
+    title: "Translucent Pedicle & Screw Guidance 3D",
+    metrics: "0.064 mm Surface Accuracy · 339.8 FPS Surgical Mesh · Zero Pre-Op CT",
     summary:
-      "Even under real 100 kV Compton scatter and beam hardening, resolves crisp outer cortical bone shells, spongy trabecular marrow, articular joint gaps, and 2 mm micro-structures.",
-    image: planmecaAxialImg,
+      "Translucent cortical rendering reveals bilateral pedicle screw trajectories and vertebral canal clearance directly from 2D C-arm spins for intraoperative verification.",
+    image: lumbarScrewsImg,
   },
   {
-    id: "lumbar-198",
-    badge: "Lumbar Spine Axial Study · 03",
-    source: "198° Short-Scan under AEC, Scatter & ±6.5 mm Sag",
-    title: "Human Lumbar Pedicle & Canal Fidelity",
-    metrics: "0.897 Structural SSIM (4.4× Gain) · 23.8 dB PSNR · 6.7 s CPU",
+    id: "knee-512",
+    badge: "Real 100 kV Knee 3D · 03",
+    source: "Real 100 kV / 80 mAs Physical Bone Scanner (210°)",
+    title: "512³ Real 100 kV Knee Joint Cinematic 3D",
+    metrics: "512×512×320 Volume in 1.19 s · 124.6 FPS Interactive 3D · 0.50 mm Voxel",
     summary:
-      "Achieves a 4.4× clarity jump over uncompensated reconstruction, delivering crisp bilateral pedicle corridors and closed anterior vertebral walls directly from 2D X-ray projections.",
-    image: lumbar198AxialImg,
+      "Direct 3D reconstruction from 500 raw 100 kV physical 2D X-ray projections of a human knee joint (femur, patella, tibia, fibula) with crisp articular margins and zero CT input.",
+    image: knee512Img,
   },
   {
-    id: "bone-3d-vrt",
-    badge: "Derived 3D Bone VRT · 04",
-    source: "Emerges Automatically From Axial Volume",
-    title: "Multiplanar MPR & 3D Cortical Bone VRT",
-    metrics: "16-Bit PACS CT DICOM Export · Zero Extra Hardware",
+    id: "knee-ivory",
+    badge: "Cortical Knee 3D · 04",
+    source: "Real 100 kV Physical Bone · Pure Cortical Mode",
+    title: "Pure Ivory Knee Cortical 3D",
+    metrics: "0.68 mm Axial Resolution · 337.9 FPS Surgical Mesh · 0.064 mm Smoothness",
     summary:
-      "Once the true Axial volume is reconstructed from raw 2D X-rays, synchronized Sagittal/Coronal MPR crosshairs and rotatable 3D shaded cortical bone volume rendering emerge automatically.",
-    image: planmeca3dVrtImg,
+      "High-contrast cortical bone surface extraction resolves fine joint anatomy, patella boundaries, and sub-millimeter bone contours without double-edge blurring.",
+    image: kneeIvoryImg,
   },
 ];
 
@@ -76,24 +76,24 @@ const HEADLINE_KPIS = [
     detail: "No preoperative CT scan needed",
   },
   {
-    value: "0.68 mm",
-    label: "Verified Axial Resolution",
-    detail: "On real 100 kV physical bone",
+    value: "0.64–1.19 s",
+    label: "512³ GPU Reconstruction",
+    detail: "512×512×320 high-res volume",
+  },
+  {
+    value: "120–134 FPS",
+    label: "Cinematic 3D Rendering",
+    detail: "1024px real-time GPU viewport",
+  },
+  {
+    value: "0.064 mm",
+    label: "Surface Fidelity",
+    detail: "Sub-0.1 mm geometric accuracy",
   },
   {
     value: "4.4× Gain",
     label: "0.897 Structural SSIM",
-    detail: "Vs. uncompensated reconstruction",
-  },
-  {
-    value: "120°–216°",
-    label: "Short-Scan & Limited-Arc",
-    detail: "Motorized C-arm sweep support",
-  },
-  {
-    value: "6–19 s CPU",
-    label: "Offline Reconstruction",
-    detail: "< 1 s on GPU · 16-bit CT DICOM",
+    detail: "120°–210° C-arm arc support",
   },
 ];
 
@@ -111,12 +111,12 @@ const BARRIERS = [
   {
     num: "03",
     title: "Edge-On Operating Table Rail Photon Starvation",
-    desc: "When a C-arm shoots edge-on through dense OT table rails, detector counts drop near zero. OmniSpine™ automatically detects and heals photon-starved projections (119,621 pixels healed on real Siemens spins).",
+    desc: "When a C-arm shoots edge-on through dense OT table rails, detector counts drop near zero. OmniSpine™ automatically detects and heals photon-starved projections prior to 3D volume formation.",
   },
   {
     num: "04",
     title: "Real Physical Compton Scatter & Polychromatic Beam Hardening",
-    desc: "Wide cone-beam geometry generates heavy scatter haze and energy hardening through dense vertebrae. OmniSpine™ performs physics-based scatter suppression and linearization before Axial formation.",
+    desc: "Wide cone-beam geometry generates heavy scatter haze and energy hardening through dense vertebrae and knee joints. OmniSpine™ performs physics-based scatter suppression and linearization.",
   },
   {
     num: "05",
@@ -138,7 +138,7 @@ const SWEEP_SCORECARD = [
     shots: "160",
     baseline: "0.897* / 23.8 dB",
     omnispine: "0.892–0.897 / 23.8 dB",
-    verdict: "4.4× clarity jump (6.7–7.8 s CPU)",
+    verdict: "4.4× clarity jump (0.64 s GPU)",
   },
   {
     mode: "165° Compact C-Arm Arc",
@@ -152,7 +152,7 @@ const SWEEP_SCORECARD = [
     shots: "108",
     baseline: "0.580 / 19.1 dB",
     omnispine: "0.718 (+13.8% SSIM)",
-    verdict: "Closes missing anterior cortex cleanly",
+    verdict: "Closes missing anterior cortex (1.32 s GPU)",
   },
   {
     mode: "120° Severe Limited-Angle Arc",
@@ -167,8 +167,8 @@ export const Route = createFileRoute("/research/omnispine")({
   component: ResearchOmniSpinePage,
   head: () =>
     pageHead(
-      "OmniSpine™ Axial Engine — True Axial Spine CT From 2D C-Arm X-Rays | BABELL GROUP",
-      "OmniSpine™ Axial Engine by Omni Research Lab, BABELL GROUP: converts rotating 2D motorized C-arm X-rays into 0.68 mm Axial spine CT slices and 16-bit DICOM series with zero preoperative CT.",
+      "OmniSpine™ Axial & 3D GPU Engine — Spine & Knee CBCT From 2D X-Rays | BABELL GROUP",
+      "OmniSpine™ by Omni Research Lab, BABELL GROUP: converts rotating 2D C-arm X-rays into 512x512x320 Axial CT and 120+ FPS Cinematic 3D Spine & Knee reconstructions with zero preoperative CT.",
       "/research/omnispine",
       {
         "@context": "https://schema.org",
@@ -176,13 +176,13 @@ export const Route = createFileRoute("/research/omnispine")({
           buildBreadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Research", path: "/research" },
-            { name: "OmniSpine Axial Engine", path: "/research/omnispine" },
+            { name: "OmniSpine Axial & 3D GPU Engine", path: "/research/omnispine" },
           ]),
           {
             "@type": "WebPage",
-            name: "OmniSpine™ Axial Engine — Omni Research Lab",
+            name: "OmniSpine™ Axial & 3D GPU Engine — Omni Research Lab",
             description:
-              "Clinical validation of CT-free Axial spine reconstruction directly from 2D motorized C-arm X-rays by BABELL GROUP.",
+              "Clinical validation of CT-free Axial & 3D Spine and Knee reconstruction directly from 2D motorized C-arm X-rays by BABELL GROUP.",
             url: "https://cero.omniide.com/research/omnispine",
             publisher: {
               "@type": "Organization",
@@ -192,7 +192,7 @@ export const Route = createFileRoute("/research/omnispine")({
           },
         ],
       },
-      "OmniSpine Axial Engine, 2D C-arm to Axial CT, CT-free spine navigation, motorized C-arm CBCT, 0.68 mm axial bone, BABELL GROUP, Omni Research Lab"
+      "OmniSpine Axial Engine, 2D C-arm to Axial CT, 3D Spine CBCT, 3D Knee CBCT, CT-free spine navigation, BABELL GROUP, Omni Research Lab"
     ),
 });
 
@@ -214,20 +214,20 @@ function ResearchOmniSpinePage() {
           </Link>
           <Eyebrow>Omni Research Lab &middot; BABELL GROUP</Eyebrow>
           <h1>
-            OmniSpine&trade; Axial Engine.
+            OmniSpine&trade; Axial &amp; 3D Engine.
             <br />
-            True Axial Spine CT From 2D C-Arm X-Rays.
+            True 3D Spine &amp; Knee CT From 2D X-Rays.
           </h1>
           <p>
-            An offline, software-only intraoperative 3D Cone-Beam CT reconstruction engine that
-            converts standard rotating 2D mobile C-arm X-ray shots into crisp Axial spine slices,
-            multiplanar reformats, and 3D bone models &mdash; requiring zero preoperative CT scan
-            and zero hardware modification.
+            An offline, GPU-accelerated intraoperative 3D Cone-Beam CT engine that converts
+            standard rotating 2D X-ray shots into 512&times;512&times;320 Axial slices, multiplanar
+            reformats, and 120+ FPS Cinematic 3D bone &amp; implant models &mdash; requiring zero
+            preoperative CT scan and zero hardware modification.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button variant="brand" asChild>
               <a href="#clinical-proofs" className="flex items-center gap-2">
-                Inspect Real-Machine Proofs <ArrowRight className="size-4" />
+                Inspect 3D Spine &amp; Knee Proofs <ArrowRight className="size-4" />
               </a>
             </Button>
             <Button variant="outline" asChild>
@@ -265,21 +265,21 @@ function ResearchOmniSpinePage() {
         </div>
       </section>
 
-      {/* Interactive Real-Machine Clinical Proofs */}
+      {/* Interactive GPU 3D Spine & Knee Clinical Proofs */}
       <section id="clinical-proofs" className="section bg-background">
         <div className="site-width">
           <div className="section-heading">
             <div>
               <Eyebrow>Zero Simulation &middot; Zero CT Input</Eyebrow>
               <h2>
-                Validated on Real Hospital
+                GPU Cinematic 3D Spine
                 <br />
-                2D X-Ray Machines
+                &amp; Real 100 kV Knee Proofs
               </h2>
             </div>
             <p className="section-intro">
-              Verified on two independent physical clinical X-ray captures plus a 120&deg;&ndash;198&deg;
-              human lumbar spine sweep study. Select any proof below to inspect.
+              Interactive 3D reconstructions generated directly from 2D X-ray projections across
+              motorized C-arm Lumbar Spine (L1&ndash;L5) and Real 100 kV Knee Bone datasets.
             </p>
           </div>
 
@@ -289,7 +289,7 @@ function ResearchOmniSpinePage() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               <div className="lg:col-span-7">
-                <div className="relative w-full aspect-square sm:aspect-[4/3] bg-black rounded-xl overflow-hidden border border-border shadow-md">
+                <div className="relative w-full aspect-square sm:aspect-[4/3] bg-[#0d1829] rounded-xl overflow-hidden border border-border shadow-md">
                   <img
                     src={activeProof.image}
                     alt={activeProof.title}
@@ -319,17 +319,17 @@ function ResearchOmniSpinePage() {
                 <div className="pt-2 space-y-2 border-t border-border">
                   <div className="flex items-center gap-2 text-xs text-foreground font-medium">
                     <CheckCircle2 className="size-4 text-primary shrink-0" />
-                    <span>100% offline Windows execution &mdash; zero cloud transfer</span>
+                    <span>100% offline Windows GPU execution &mdash; zero cloud transfer</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-foreground font-medium">
                     <CheckCircle2 className="size-4 text-primary shrink-0" />
-                    <span>Exports PACS-standard 16-bit CT DICOM series</span>
+                    <span>Exports PACS-standard 16-bit CT DICOM &amp; 3D surgical meshes</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* 4-Card Responsive Selector Grid */}
+            {/* 4-Card Responsive Selector Grid (2 Spine + 2 Knee) */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-6 pt-6 border-t border-border">
               {AXIAL_PROOFS.map((item) => {
                 const active = item.id === activeProof.id;
@@ -344,7 +344,7 @@ function ResearchOmniSpinePage() {
                         : "border-border bg-background hover:border-primary/50"
                     }`}
                   >
-                    <div className="aspect-[4/3] bg-black overflow-hidden">
+                    <div className="aspect-[4/3] bg-[#0d1829] overflow-hidden">
                       <img
                         src={item.image}
                         alt={item.title}
